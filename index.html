@@ -4,7 +4,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
 </head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: Arial, sans-serif;
+        height: 200vh;
+    }
+    .header-container {
+        background-color: #333;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        position: sticky;
+        top:0;
+        align-items: center;
+        padding: 10px 20px;
+        height: 120px;
+    }
+    .aosc-logo img {
+        margin-left: 200px;
+        height: 100%;
+        aspect-ratio: 1;
+    }
+    .navbar-container {
+        margin-right: 200px;
+    }
+    .navbar-list-element {
+        list-style-type: none;
+        display: inline-block;
+    }
+    .navbar-list-element-link {
+        text-decoration: none;
+        color: white;
+    }
+</style>
 <body>
-    <h1>Welcome to the Home Page</h1>
+    <nav class="header-container">
+        <div class="aosc-logo">
+            <a href="index.html">
+                <img src="media\cropped-AOSC-logo-White-06.png" alt="Logo">
+            </a>
+        </div>
+        <div class="navbar-container">
+            <ul class="navbar-list">
+                <li class="navbar-list-element"><a class="navbar-list-element-link" href="index.html">Home</a></li>
+                <li class="navbar-list-element"><a class="navbar-list-element-link" href="#">About Us</a></li>
+                <li class="navbar-list-element"><a class="navbar-list-element-link" href="#">Services</a></li>
+                <li class="navbar-list-element"><a class="navbar-list-element-link" href="#">Careers</a></li>
+                <li class="navbar-list-element"><a class="navbar-list-element-link" href="#">Contact Us</a></li>
+            </ul>
+        </div>
+    </nav>
 </body>
 </html>
