@@ -7,6 +7,7 @@
 <style>
     * {
         box-sizing: border-box;
+        -webkit-font-smoothing: antialiased;
     }
     body {
         margin: 0;
@@ -119,6 +120,30 @@
     .switch .look:checked + label {
         background-color: lightsteelblue;
     }
+    .image-slider {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        background-color: #b3c4ff;
+        color: rgb(0, 0, 0);
+    }
+    .slider-section {
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+        margin: 20px;
+        gap: 20px;
+        width: 100%;
+        overflow: hidden;
+    }
+    .image-section-heading {
+        font-size: 2.5rem;
+        margin: 30px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        color:#C59443;
+        font-weight: bold;
+    }
 </style>
 <body>
     <nav class="header-container">
@@ -146,5 +171,28 @@
             </div>
         </div>
     </nav>
+    <section class="image-slider">
+        <p class="image-section-heading">EVENTS & SEMINAR GALLERY</p>
+        <h2 class="slider-heading">DAV College, Amritsar</h2>
+            <div class="slider-section slider-section-1">
+                <img src="media\slider1-1.png" alt="container">
+                <img src="media\slider1-2.png" alt="container">
+                <img src="media\slider1-3.png" alt="container">
+                <img src="media\slider1-4.png" alt="container">
+                <img src="media\slider1-5.png" alt="container">
+                <img src="media\slider1-6.png" alt="container">
+                <img src="media\slider1-7.png" alt="container">
+            </div>
+        <h2 class="slider-heading">AGC, Amritsar</h2>
+            <div class="slider-section slider-section-2">
+                <img src="media\slider2-1.png" alt="container">
+                <img src="media\slider2-2.png" alt="container">
+                <img src="media\slider2-3.png" alt="container">
+                <img src="media\slider2-4.png" alt="container">
+                <img src="media\slider2-5.png" alt="container">
+                <img src="media\slider2-6.png" alt="container">
+                <img src="media\slider2-7.png" alt="container">
+            </div>
+    </section>
 </body>
 </html>
