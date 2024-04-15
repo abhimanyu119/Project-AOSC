@@ -1,6 +1,7 @@
 * {
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
+    scroll-behavior: smooth;
 }
 body {
     margin: 0;
@@ -137,6 +138,11 @@ visibility: hidden;
     color:#C59443;
     font-weight: bold;
 }
+footer {
+        position: relative;
+        bottom: 0;
+        width: 100%;
+}
 .footer-container {
     background-image: linear-gradient(to bottom, #1c274f, #2f3d69, #435485, #576ca2, #6b85bf, #6b85bf, #6b85bf, #6b85bf, #576ca2, #435485, #2f3d69, #1c274f);
     color: white;
@@ -146,3 +152,85 @@ visibility: hidden;
     gap: 3rem;
     padding: 30px 200px 30px 200px;
 }
+                    /* intro-slider section */
+
+.intro-slider {
+    display: flex;
+    flex-direction: row;
+    height: 50vh;
+    width: 100%;
+    overflow: hidden;
+    margin-left: 13vw;
+    margin-top: 5vh;
+    margin-right: 10vw;
+}
+.intro-slider-container {
+        display: flex;
+        width: 80%;
+        height: 40vh;
+        position: relative;
+        flex-shrink: 0;
+        overflow: hidden;
+}
+.intro-text{
+    width: 70%;
+    height: 100%;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 3vh;
+    box-shadow: 2px 2px 5px 2px #888888;
+    /* position: relative; */
+    padding-left: 2vw;
+}
+.text{
+    margin: 10vh 6vh 2vh 10vh;
+    position: relative;
+}
+.icon{
+    text-align: left;
+    margin: 2vh 6vh 2vh 10vh;
+}
+.icon-links{
+    padding-right: 2vw;
+    font-size: 4vh;
+    color: black;
+    margin: 1vh;
+}
+.img-container{
+    width: 30%;
+    margin: auto;
+}
+.intro-img{
+    border: 1px solid black;
+    border-radius: 50%;
+    height: 20vh;
+    aspect-ratio: 1;
+    margin-left: 6vw;
+}
+.scroll-left{
+    position: absolute;
+    left:0;
+    top: 155%;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 7vh;
+    padding-left: 10px;
+    color: black;
+    margin-left: 2vh;
+  }
+  .scroll-right{
+    position: absolute;
+    right:0;
+    top: 155%;
+    z-index: 1;
+    cursor: pointer;
+    font-size: 7vh;
+    padding-right: 10px;
+    color: black;
+    margin-right: 2vh;
+  }
+  .scroll-right:hover{
+    transform: scale(1.5);
+  }
+  .scroll-left:hover{
+    transform: scale(1.5);
+  }
