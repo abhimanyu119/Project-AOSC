@@ -37,25 +37,29 @@
     <section class="image-slider">
         <p class="image-section-heading">EVENTS & SEMINAR GALLERY</p>
         <h3 class="slider-heading">DAV College, Amritsar</h3>
-        <div class="slider-section slider-section-1">
-            <img src="media\slider1-1.png" alt="container">
-            <img src="media\slider1-2.png" alt="container">
-            <img src="media\slider1-3.png" alt="container">
-            <img src="media\slider1-4.png" alt="container">
-            <img src="media\slider1-5.png" alt="container">
-            <img src="media\slider1-6.png" alt="container">
-            <img src="media\slider1-7.png" alt="container">
-        </div>
+            <div class="slider-section" data-direction="left">
+                <div class="slider-inner">
+                    <img src="media\slider1-1.png" alt="container">
+                    <img src="media\slider1-2.png" alt="container">
+                    <img src="media\slider1-3.png" alt="container">
+                    <img src="media\slider1-4.png" alt="container">
+                    <img src="media\slider1-5.png" alt="container">
+                    <img src="media\slider1-6.png" alt="container">
+                    <img src="media\slider1-7.png" alt="container">
+                </div>
+            </div>
         <h3 class="slider-heading">AGC, Amritsar</h3>
-        <div class="slider-section slider-section-2">
-            <img src="media\slider2-1.png" alt="container">
-            <img src="media\slider2-2.png" alt="container">
-            <img src="media\slider2-3.png" alt="container">
-            <img src="media\slider2-4.png" alt="container">
-            <img src="media\slider2-5.png" alt="container">
-            <img src="media\slider2-6.png" alt="container">
-            <img src="media\slider2-7.png" alt="container">
-        </div>
+            <div class="slider-section" data-direction="right">
+                <div class="slider-inner"></div>
+                    <img src="media\slider2-1.png" alt="container">
+                    <img src="media\slider2-2.png" alt="container">
+                    <img src="media\slider2-3.png" alt="container">
+                    <img src="media\slider2-4.png" alt="container">
+                    <img src="media\slider2-5.png" alt="container">
+                    <img src="media\slider2-6.png" alt="container">
+                    <img src="media\slider2-7.png" alt="container">
+                </div>
+            </div>
     </section>
   
     <!-- Intro-Slider starts here !!!!! -->
@@ -165,8 +169,25 @@
                     <li><i class="fa-solid fa-location-dot"></i><span> Level4, Twin tower building B block Ranjit avenue
                             Amritsar, Amritsar, India, Punjab region </span></li>
             </div>
-    </footer>
-    <script src="style.js"></script>
+    </footer>                    
+    <script>
+        const scrollers = document.querySelectorAll('.slider-section');
+        console.log(scrollers);
+        addAnimation();
+        function addAnimation() {
+            scrollers.forEach((scroller) => {
+                scroller.setAttribute("data-animated", "true");
+                const scrollerInner = scroller.querySelector('.slider-inner');
+                const scrollerContent = Array.from(scrollerInner.children);
+                scrollerContent.forEach(item => {
+                    const clonedItem = item.cloneNode(true);
+                    clonedItem.setAttribute("aria-hidden", true);
+                    scrollerInner.appendChild(clonedItem);
+                    console.log(clonedItem);
+                })
+        });
+    }
+    </script>
+<script src="style.js"></script>
 </body>
-
 </html>

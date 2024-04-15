@@ -19,6 +19,7 @@ body {
     align-items: center;
     padding: 10px 20px;
     height: 120px;
+    z-index: 1000;
 }
 .logo1 img {
     margin-left: 200px;
@@ -119,17 +120,32 @@ visibility: hidden;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #b3c4ff;
+    background-color: #ffffff;
     color: rgb(0, 0, 0);
 }
 .slider-section {
-    display: flex;
-    justify-content: start;
-    align-items: flex-start;
-    margin: 20px;
-    gap: 20px;
-    width: 100%;
+    max-width: 600px;
     overflow: hidden;
+    max-width: 1200px;
+    mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
+}
+.slider-inner {
+    display: flex;
+    gap: 2rem;
+    padding-block: 2rem;
+}
+.slider-section[data-animated=true] .slider-inner {
+    width: max-content;
+    flex-wrap: nowrap;
+    animation: scroll 40s var(--_animation-direction, forwards) linear  infinite;
+}
+.slider-section[data-direction="right"] {
+    --_animation-direction: reverse;
+}
+@keyframes scroll {
+    to {
+        transform: translate(calc(-50% - 1rem));
+    }
 }
 .image-section-heading {
     font-size: 2.5rem;
