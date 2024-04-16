@@ -1,6 +1,5 @@
 //Just for looking this code is not correct!!!!!
 
-
 let   scrollSize = 0;
 const container = document.querySelector(".intro-slider");
 
@@ -9,11 +8,11 @@ function scrollRight() {
     if (scrollSize > container.scrollWidth - container.clientWidth) {
         scrollSize = 0;
     }
+    // scrollSize+=40;
     container.scrollTo({
         left: scrollSize,
         behavior: 'smooth',
     });
-    scrollSize += 20;
 }
 
 document.querySelector(".scroll-left").addEventListener("click", function () {
