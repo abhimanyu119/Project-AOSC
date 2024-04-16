@@ -168,6 +168,8 @@ footer {
     gap: 3rem;
     padding: 30px 200px 30px 200px;
 }
+
+
                     /* intro-slider section */
 
 .intro-slider {
@@ -176,17 +178,16 @@ footer {
     height: 50vh;
     width: 100%;
     overflow: hidden;
-    margin-left: 13vw;
     margin-top: 5vh;
-    margin-right: 10vw;
+    padding-left: 100px;
+    padding-right: 100px;
 }
 .intro-slider-container {
         display: flex;
         width: 80%;
         height: 40vh;
-        position: relative;
+        /* position: relative; */
         flex-shrink: 0;
-        overflow: hidden;
 }
 .intro-text{
     width: 70%;
@@ -198,7 +199,7 @@ footer {
     padding-left: 2vw;
 }
 .text{
-    margin: 10vh 6vh 2vh 10vh;
+    margin: 5vh 9vh 2vh 10vh;
     position: relative;
 }
 .icon{
@@ -213,19 +214,22 @@ footer {
 }
 .img-container{
     width: 30%;
-    margin: auto;
+    margin-right: 12vw;
+    height: 100%;
 }
 .intro-img{
     border: 1px solid black;
     border-radius: 50%;
-    height: 20vh;
+    height: 25vh;
     aspect-ratio: 1;
     margin-left: 6vw;
+    margin-top: 7vh;
+    margin-right: 12vw;
 }
 .scroll-left{
     position: absolute;
     left:0;
-    top: 155%;
+    top: 38%;
     z-index: 1;
     cursor: pointer;
     font-size: 7vh;
@@ -236,7 +240,7 @@ footer {
   .scroll-right{
     position: absolute;
     right:0;
-    top: 155%;
+    top: 38%;
     z-index: 1;
     cursor: pointer;
     font-size: 7vh;
