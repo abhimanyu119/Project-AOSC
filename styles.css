@@ -160,29 +160,29 @@ footer {
         position: relative;
         bottom: 0;
         width: 100%;
-}
-.footer-container {
-    background-image: linear-gradient(to bottom, #1c274f, #2f3d69, #435485, #576ca2, #6b85bf, #6b85bf, #6b85bf, #6b85bf, #576ca2, #435485, #2f3d69, #1c274f);
+        background-image: linear-gradient(to bottom, #1c274f, #2f3d69, #435485, #576ca2, #6b85bf, #6b85bf, #6b85bf, #6b85bf, #576ca2, #435485, #2f3d69, #1c274f);
     height: 200px;
-color: white;
-display: grid;
-grid-template: 1fr / 1fr 1fr 1fr;
-padding-inline: 200px;
-gap: 3rem;
-padding: 30px 200px 30px 200px;
+    color: white;
+    display: grid;
+    grid-template: 1fr / 1fr 1fr 1fr;
+    padding-inline: 200px;
+    gap: 3rem;
+    padding: 30px 200px 30px 200px;
 }
 .footer-section{
-   padding: 15px;
+    padding: 15px;
 }
-#img{
-   
-   padding : 0px 10px;
-   /* margin: 10px 10px 10px 10px; */
-   left: -31px;
-   position: relative;
+.footer-section ul {
+    list-style-type: none;
+    padding-inline: 0;
+
 }
-
-
+.footer-social-icons {
+    display: inline-block;
+}
+#img {
+    margin-right: 20px;
+}
                     /* intro-slider section */
 
 .intro-slider {
