@@ -194,6 +194,7 @@ padding: 30px 200px 30px 200px;
     margin-top: 5vh;
     padding-left: 100px;
     padding-right: 100px;
+    border: 1px solid black;
 }
 .intro-slider-container {
         display: flex;
@@ -201,6 +202,7 @@ padding: 30px 200px 30px 200px;
         height: 40vh;
         /* position: relative; */
         flex-shrink: 0;
+        border: 1px solid black;
 }
 .intro-text{
     width: 70%;
