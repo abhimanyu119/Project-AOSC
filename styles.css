@@ -136,6 +136,10 @@ visibility: hidden;
     gap: 2rem;
     padding-block: 2rem;
 }
+.slider-inner img {
+    border-radius: 10px;
+    border: 3px solid #1C274F;
+}
 .slider-section[data-animated=true] .slider-inner {
     width: max-content;
     flex-wrap: nowrap;

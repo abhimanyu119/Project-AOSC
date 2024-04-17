@@ -46,6 +46,22 @@ addAnimation();
                     clonedItem.setAttribute("aria-hidden", true);
                     scrollerInner.appendChild(clonedItem);
                     console.log(clonedItem);
-                })
-        });
-    }
+                });
+
+                scroller.addEventListener("mouseenter", () => {
+                    stopAnimation(scrollerInner);
+                });
+
+                scroller.addEventListener("mouseleave", () => {
+                    resumeAnimation(scrollerInner);
+                });
+            });
+        }
+
+        function stopAnimation(element) {
+            element.style.animationPlayState = "paused";
+        }
+
+        function resumeAnimation(element) {
+            element.style.animationPlayState = "running";
+        }
