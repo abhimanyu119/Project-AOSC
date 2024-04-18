@@ -265,12 +265,13 @@ footer {
     width: 100%;
     overflow: hidden;
     margin-top: 5vh;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 10vw;
+    padding-right: 10vw;
+    margin-right: 4vw;
 }
 
 .intro-slider-container {
-    margin: 5vh 5vh 5vh 12vw;
+    margin: 5vh 1vw 5vh 12vw;
     display: flex;
     width: 80%;
     height: 40vh;
@@ -327,7 +328,7 @@ footer {
     z-index: 1;
     cursor: pointer;
     font-size: 7vh;
-    padding-left: 10px;
+    padding-left: 3vw;
     color: black;
     margin-left: 2vh;
 }
