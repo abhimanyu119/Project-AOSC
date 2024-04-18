@@ -7,8 +7,6 @@ function scrollRight() {
     if (scrollSize > container.scrollWidth - container.clientWidth) {
         scrollSize = 0;
     }
-    scrollSize+=15;
-    scrollSize = scrollSize + 100;
     container.scrollTo({
         left: scrollSize,
         behavior: 'smooth',
