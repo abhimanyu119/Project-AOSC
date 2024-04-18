@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    height: 200vh;
+    height: 400vh;
     width: 100vw;
     background-color: rgb(255, 255, 255);
 }
@@ -43,7 +43,6 @@ body {
 }
 
 .header-container {
-    /* background-color: #9c9c9c; */
     display: flex;
     justify-content: space-between;
     position: sticky;
@@ -53,8 +52,18 @@ body {
     height: 120px;
     width: 100%;
     z-index: 1000;
+    animation: navBG linear forwards;
+    animation-timeline: view();
+    animation-range-start: 100vh;
+    animation-range-end: 200vh;
 }
 
+@keyframes navBG {
+    100% {
+        background-color: var(--aosc-blue);
+        opacity: 0.9;
+    }
+}
 .logo1 img {
     margin-left: 200px;
     width: 100px;
