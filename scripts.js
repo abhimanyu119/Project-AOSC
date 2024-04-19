@@ -1,40 +1,24 @@
-//Just for looking this code is not correct!!!!!
+var slideIndex = 0;
+carousel();
 
-
-let   scrollSize = 0;
-const container = document.querySelector(".intro-slider");
-
-function scrollRight() {
-    scrollSize += 1100;
-    if (scrollSize > container.scrollWidth - container.clientWidth) {
-        scrollSize = 0;
-    }
-    container.scrollTo({
-        left: scrollSize,
-        behavior: 'smooth',
-    });
-    scrollSize += 20;
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("intro-slider-container");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  slideIndex++;
+  if (slideIndex > x.length) {slideIndex = 1}
+  x[slideIndex-1].style.display = "block";
+  setTimeout(carousel, 2000);
 }
-
-document.querySelector(".scroll-left").addEventListener("click", function () {
-    scrollSize -= 1100;
-    if (scrollSize < 0) {
-        scrollSize = container.scrollWidth - container.clientWidth;
-    }
-
-    container.scrollTo({
-        left: scrollSize,
-        behavior: 'smooth'
-    });
-});
-
-document.querySelector(".scroll-right").addEventListener("click", scrollRight);
-setInterval(scrollRight, 2000);
 
 /* Image Slider */
 
 const scrollers = document.querySelectorAll('.slider-section');
-        console.log(scrollers);
+console.log(scrollers);
+addAnimation();
+
         addAnimation();
         function addAnimation() {
             scrollers.forEach((scroller) => {
@@ -46,6 +30,22 @@ const scrollers = document.querySelectorAll('.slider-section');
                     clonedItem.setAttribute("aria-hidden", true);
                     scrollerInner.appendChild(clonedItem);
                     console.log(clonedItem);
-                })
-        });
-    }
+                });
+
+                scroller.addEventListener("mouseenter", () => {
+                    stopAnimation(scrollerInner);
+                });
+
+                scroller.addEventListener("mouseleave", () => {
+                    resumeAnimation(scrollerInner);
+                });
+            });
+        }
+
+        function stopAnimation(element) {
+            element.style.animationPlayState = "paused";
+        }
+
+        function resumeAnimation(element) {
+            element.style.animationPlayState = "running";
+        }
