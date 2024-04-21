@@ -248,7 +248,6 @@ body {
     width: 70%;
     overflow: hidden;
     margin: auto;
-    border: 1px solid black;
     position: relative;
 }
 
@@ -258,18 +257,21 @@ body {
     height: 100%;
     position: absolute;
     z-index: 20;
-    background-color: rgba(165, 163, 163, 0.397);
+    /* background-color: rgba(165, 163, 163, 0.397); */
     transition: 1s;
+   
 }
 
 .intro-text {
     width: 70%;
     margin: 6vh 6vh 2vh 15vh;
     height: 80%;
+    color: white;
     font-family: 'Times New Roman', Times, serif;
     font-size: 3vh;
     position: relative;
-    box-shadow: 2px 2px 5px 2px #701a1a;
+    box-shadow: 5px 8px 7px 4px var(--primary-blue);
+    border: 1px solid var(--primary-orange);
 }
 
 .text {
@@ -286,9 +288,13 @@ body {
 .icon-links {
     padding-right: 2vw;
     font-size: 4vh;
-    color: black;
+    color: aliceblue;
     position: relative;
     width: 100%;
+}
+.icon-links:hover {
+    transition: all var(--transition-delay);
+    color:var(--primary-blue);
 }
 
 .img-container {
@@ -334,12 +340,14 @@ body {
 
 .scroll-right:hover {
     transform: scale(1.5);
+    transition: all var(--transition-delay);
 }
 
 .scroll-left:hover {
     transform: scale(1.5);
-}
+    transition: all var(--transition-delay);
 
+}
 
 /* Image slider section */
 
