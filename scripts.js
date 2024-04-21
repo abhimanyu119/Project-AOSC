@@ -9,10 +9,11 @@ const goPrev = () => {
         counter--;
         introslider();
     } };
-const goNext = () => {
+const goNext = () =>
+ {
     if(counter <slides.length -1){
         counter++;
-        introslider();
+        introslider()
     } };
 const introslider = () =>{
     slides.forEach((slide) => {
