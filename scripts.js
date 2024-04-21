@@ -1,17 +1,26 @@
-var slideIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("intro-slider-container");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";
-  }
-  slideIndex++;
-  if (slideIndex > x.length) {slideIndex = 1}
-  x[slideIndex-1].style.display = "block";
-  setTimeout(carousel, 2000);
+const slides = document.querySelectorAll('.intro-slider-container');
+var counter = 0;
+console.log(slides);
+slides.forEach((slide,index) => {
+    slide.style.left = `${index * 100}%`;
+});
+const goPrev = () => { 
+    if(counter > 0){
+        counter--;
+        introslider();
+    } };
+const goNext = () =>
+ {
+    if(counter <slides.length -1){
+        counter++;
+        introslider()
+    } };
+const introslider = () =>{
+    slides.forEach((slide) => {
+        slide.style.transform = `translateX(-${counter * 100}%)`;
+    });
 }
+
 
 /* Image Slider */
 
