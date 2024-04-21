@@ -1,27 +1,34 @@
 const slides = document.querySelectorAll('.intro-slider-container');
-var counter = 0;
-console.log(slides);
-slides.forEach((slide,index) => {
+let counter = 0;
+
+slides.forEach((slide, index) => {
     slide.style.left = `${index * 100}%`;
 });
+
 const goPrev = () => { 
-    if(counter > 0){
+    if(counter <= 0){
+        counter = slides.length - 1;
+    } else {
         counter--;
-        introslider();
-    } };
-const goNext = () =>
- {
-    if(counter <slides.length -1){
+    }
+    introslider();
+};
+
+const goNext = () => {
+    if(counter >= slides.length - 1){
+        counter = 0;
+    } else {
         counter++;
-        introslider()
-    } };
-const introslider = () =>{
+    }
+    introslider();
+};
+
+const introslider = () => {
     slides.forEach((slide) => {
         slide.style.transform = `translateX(-${counter * 100}%)`;
     });
-}
-
-
+};
+setInterval(goNext, 5000);
 /* Image Slider */
 
 const scrollers = document.querySelectorAll('.slider-section');
