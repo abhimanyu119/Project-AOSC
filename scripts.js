@@ -5,6 +5,11 @@ slides.forEach((slide, index) => {
     slide.style.left = `${index * 100}%`;
 });
 
+function resetInterval() {
+  clearInterval(intervalId);
+  intervalId = setInterval(goNext, 5000);
+}
+
 const goPrev = () => { 
     if(counter <= 0){
         counter = slides.length - 1;
@@ -12,6 +17,7 @@ const goPrev = () => {
         counter--;
     }
     introslider();
+    resetInterval();
 };
 
 const goNext = () => {
@@ -21,6 +27,7 @@ const goNext = () => {
         counter++;
     }
     introslider();
+    resetInterval();
 };
 
 const introslider = () => {
@@ -28,7 +35,8 @@ const introslider = () => {
         slide.style.transform = `translateX(-${counter * 100}%)`;
     });
 };
-setInterval(goNext, 5000);
+
+let intervalId = setInterval(goNext, 5000);
 /* Image Slider */
 
 const scrollers = document.querySelectorAll('.slider-section');
