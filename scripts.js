@@ -1,3 +1,5 @@
+// Intro Slider
+
 const slides = document.querySelectorAll('.intro-slider-container');
 let counter = 0;
 
@@ -6,8 +8,8 @@ slides.forEach((slide, index) => {
 });
 
 function resetInterval() {
-  clearInterval(intervalId);
-  intervalId = setInterval(goNext, 5000);
+    clearInterval(intervalId);
+    intervalId = setInterval(goNext, 5000);
 }
 
 const goPrev = () => { 
@@ -37,39 +39,55 @@ const introslider = () => {
 };
 
 let intervalId = setInterval(goNext, 5000);
+
 /* Image Slider */
 
 const scrollers = document.querySelectorAll('.slider-section');
-console.log(scrollers);
 addAnimation();
 
-        addAnimation();
-        function addAnimation() {
-            scrollers.forEach((scroller) => {
-                scroller.setAttribute("data-animated", "true");
-                const scrollerInner = scroller.querySelector('.slider-inner');
-                const scrollerContent = Array.from(scrollerInner.children);
-                scrollerContent.forEach(item => {
-                    const clonedItem = item.cloneNode(true);
-                    clonedItem.setAttribute("aria-hidden", true);
-                    scrollerInner.appendChild(clonedItem);
-                    console.log(clonedItem);
-                });
+function addAnimation() {
+    scrollers.forEach((scroller) => {
+        scroller.setAttribute("data-animated", "true");
+        const scrollerInner = scroller.querySelector('.slider-inner');
+        const scrollerContent = Array.from(scrollerInner.children);
+        scrollerContent.forEach(item => {
+            const clonedItem = item.cloneNode(true);
+            clonedItem.setAttribute("aria-hidden", true);
+            scrollerInner.appendChild(clonedItem);
+        });
+        scroller.addEventListener("mouseenter", () => {
+            stopAnimation(scrollerInner);
+        });
+        scroller.addEventListener("mouseleave", () => {
+            resumeAnimation(scrollerInner);
+        });
+    });
+}
 
-                scroller.addEventListener("mouseenter", () => {
-                    stopAnimation(scrollerInner);
-                });
+function stopAnimation(element) {
+    element.style.animationPlayState = "paused";
+}
 
-                scroller.addEventListener("mouseleave", () => {
-                    resumeAnimation(scrollerInner);
-                });
+function resumeAnimation(element) {
+    element.style.animationPlayState = "running";
+}
+
+/* Course Section*/
+
+const courseContent = document.querySelectorAll('.course-col');
+addCourseAnimation();
+
+function addCourseAnimation() {
+    courseContent.forEach((course) => {
+        course.addEventListener("click", () => {
+            courseContent.forEach((otherCourse) => {
+                if(otherCourse !== course) {
+                    otherCourse.classList.remove("clicked");
+                    otherCourse.classList.add("not-clicked");
+                }
             });
-        }
-
-        function stopAnimation(element) {
-            element.style.animationPlayState = "paused";
-        }
-
-        function resumeAnimation(element) {
-            element.style.animationPlayState = "running";
-        }
+            course.classList.toggle("clicked");
+            course.classList.toggle("not-clicked");
+        });
+    });
+}

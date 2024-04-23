@@ -1,8 +1,8 @@
 :root {
     --primary-blue: #1C274F;
     --primary-orange: #C59443;
-    --screen-width: calc(100vw - 5px);
-    --screen-height: calc(100vh - 5px);
+    --screen-width: 98.9vw;
+    --screen-height: 100vh;
     --transition-delay: 300ms;
     --inline-offset: 14vw;
     --block-offset: 5vh;
@@ -19,7 +19,7 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     height: max-content;
-    width: 100vw;
+    width: var(--screen-width);
     background-color: rgb(255, 255, 255);
 }
 
@@ -179,27 +179,23 @@ body {
     height: calc(var(--screen-height) );
     width: 100vw;
     position: absolute;
-    /* background-image: url(media/homepage-bg.jpeg); */
     top: 0;
     z-index: 1;
     background-color: var(--primary-blue);
     opacity: 0.2;
-    
-    /* filter: brightness(0.6); */
 }
 .body-bg-wrapper-2{
     height: calc(var(--screen-height) );
-    width: 100vw;
+    width: var(--screen-width);
     position: absolute;
     top: 0;
     z-index: 1;
     opacity: 0.9;
-
 }
 
 .intro-section {
     margin-inline: var(--inline-offset);
-    margin-block: var(--block-offset);
+    margin-block: calc(var(--block-offset) / 2);
     position: relative;
     display: flex;
     flex-direction: column;
@@ -233,6 +229,7 @@ body {
     letter-spacing: 2px;
     font-family: "Poppins", Sans-serif;
     margin-block: 20px;
+    color: white;
 }
 
 .intro-section-button {
@@ -354,12 +351,10 @@ body {
     color: white;
     margin-right: 2vh;
 }
-
 .scroll-right:hover {
     transform: scale(1.5);
     transition: all var(--transition-delay);
 }
-
 .scroll-left:hover {
     transform: scale(1.5);
     transition: all var(--transition-delay);
@@ -373,47 +368,41 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    max-width: var(--screen-width);
     padding-inline: var(--inline-offset);
     padding-block: var(--block-offset);
     background: linear-gradient(90deg, rgba(211,210,227,1) 0%, rgba(192,213,229,1) 48%, rgba(192,213,229,1) 52%, rgba(211,210,227,1) 100%);
     color: rgb(0, 0, 0);
 }
-
 .slider-section {
     max-width: 600px;
     overflow: hidden;
     max-width: 1200px;
     mask: linear-gradient(90deg, transparent, white 10%, white 90%, transparent);
 }
-
 .slider-inner {
     display: flex;
     gap: 2rem;
     margin-block: 2rem;
     padding-inline: 2rem;
 }
-
 .slider-inner img {
     border-radius: 10px;
     border: 3px solid var(--primary-blue);
 }
-
 .slider-section[data-animated=true] .slider-inner {
     width: max-content;
     flex-wrap: nowrap;
     animation: scroll 40s var(--_animation-direction, forwards) linear infinite;
 }
-
 .slider-section[data-direction="right"] {
     --_animation-direction: reverse;
 }
-
 @keyframes scroll {
     to {
         transform: translate(calc(-50% - 1rem));
     }
 }
-
 .image-section-heading {
     font-size: 2.75rem;
     margin: 50px;
@@ -422,56 +411,84 @@ body {
     font-weight: bold;
 }
 
-/* course section */
+/* Course Section */
+
 .course{
-    width: 100%;
+    width: var(--screen-width);
     /* margin: 0 auto; */
     text-align: center;
-    padding-top: 100px;
-    padding-bottom: 100px;
-    background-color: aliceblue;
+    padding-block: var(--block-offset);
+    padding-inline: var(--inline-offset);
+    background-color: white;
 }
-h1{
+.course-section-main-heading{
     font-size: 36px;
     font-weight: 600;
+    font-family: "Poppins", Sans-serif;
+    color: var(--primary-blue);
 }
-p{
-    color: #1C274F;
-    font-size:14px;
+.course-section-sub-heading{
+    color: var(--primary-orange);
+    font-size: 16px;
     font-weight: 300;
-    line-height: 22px;
-    padding: 10px;
-      
+    margin: 0;
 }
-.row{
+.courses-container{
     display: flex;
-    margin-top: 5px;
+    gap: 3rem;
+    margin-block: var(--block-offset);
     justify-content: space-between;
 }
 .course-col{
-    flex-basis: 31%;
-    background-color: #fff3f3;
+    flex-basis: 100%;
+    background: linear-gradient(180deg, rgba(75,90,147,1) 0%, rgba(189,157,125,1) 82%, rgba(186,158,110,1) 100%);
     border-radius: 10px;
     margin-bottom: 5%;
     padding: 20px 15px;
     box-sizing: border-box;
-    transform: 0.5s;
+    color: rgb(0, 0, 0);
+    filter: drop-shadow(0 0 0.5rem rgba(0,0,0,0.8));
+    cursor: pointer;
 }
-h3{
+.course-col-heading{
     text-align:center;
+    font-size: 20px;
     font-weight: 600;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: rgb(206, 206, 206);
     margin: 10px 0;
 }
 .course-col:hover{
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
-    transform: translateY(-10px);
+    transform: scale(1.02);
+    transition: all var(--transition-delay);
+    pointer-events: auto;
 }
+.course-col:not(:hover){
+    transition: all var(--transition-delay);
+}
+.course-col-text {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 10px 0;
+    line-height: 1.7rem;
+}
+.course-col.clicked {
+    transform: scale(1);
+    z-index: 1;
+    transition: all var(--transition-delay);
+}
+.course-col.not-clicked {
+    transform: scale(0.8);
+    transition: all var(--transition-delay);
+}
+
 /* Footer section */
 
 footer {
     position: relative;
     bottom: 0;
-    width: 100%;
+    width: var(--screen-width);
     background-color:#2c3b6f ;
     color: white;
     display: grid;
@@ -522,6 +539,7 @@ footer {
 .footer-section ul {
     list-style-type: none; 
 }
+
 .footer-section ul li{
     text-align: left;
     padding: 10px;
@@ -531,18 +549,17 @@ footer {
     display: inline-block;
     font-size: 1.45rem;
     color: white;
-    & a {
-        text-decoration: none;
-        
-        color: white;
-        padding: 10px;
-        border-radius: 48%;
-        transition: all var(--transition-delay);
-    }
-    & a:hover {
-        background-color: #dfaf61;
-        
-        transition: all var(--transition-delay);
+}
 
-    }
+.footer-social-icons a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 48%;
+    transition: all var(--transition-delay);
+}
+
+.footer-social-icons a:hover {
+    background-color: #dfaf61;
+    transition: all var(--transition-delay);
 }
