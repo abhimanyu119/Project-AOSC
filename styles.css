@@ -158,7 +158,7 @@ body {
     transition: var(--transition-delay);
 }
 
-/* .body-bg {
+.body-bg {
     height: var(--screen-height);
     width: var(--screen-width);
     position: fixed;
@@ -171,19 +171,30 @@ body {
     width: inherit;
     object-fit: cover;
     filter: brightness(0.6);
-} */
-
-.body-bg-wrapper {
-    height: calc(var(--screen-height) + 49vh + 5px);
-    width: 100vw;
-    position: absolute;
-    background-image: url(media/homepage-bg.jpeg);
-    top: 0;
-    z-index: 10;
-    background-color: var(--primary-blue);
     background-repeat: no-repeat;
     background-size: cover;
-    filter: brightness(0.6);
+}
+
+.body-bg-wrapper {
+    height: calc(var(--screen-height) );
+    width: 100vw;
+    position: absolute;
+    /* background-image: url(media/homepage-bg.jpeg); */
+    top: 0;
+    z-index: 1;
+    background-color: var(--primary-blue);
+    opacity: 0.2;
+    
+    /* filter: brightness(0.6); */
+}
+.body-bg-wrapper-2{
+    height: calc(var(--screen-height) );
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    opacity: 0.9;
+
 }
 
 .intro-section {
