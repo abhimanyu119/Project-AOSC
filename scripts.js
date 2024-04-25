@@ -77,9 +77,9 @@ function resumeAnimation(element) {
 const courseContent = document.querySelectorAll('.course-col');
 addCourseAnimation();
 
-let count = 0;
 function addCourseAnimation() {
     courseContent.forEach((course) => {
+        course.classList.add("not-clicked");
         course.addEventListener("click", () => {
             courseContent.forEach((otherCourse) => {
                 if(otherCourse !== course) {
@@ -88,15 +88,8 @@ function addCourseAnimation() {
                 }
             });
             course.classList.toggle("clicked");
-            if(count !== 0){
-                course.classList.toggle("not-clicked");
-            }
-            count = 1;
-            const allCoursesNotClicked = Array.from(courseContent).every(course => course.classList.contains("not-clicked"));
-
-            if (allCoursesNotClicked) {
-                courseContent.forEach(course => course.classList.remove("not-clicked"));
-            }
+            course.classList.toggle("not-clicked");
         });
     });
+
 }
