@@ -17,6 +17,7 @@
 }
 
 body {
+    position: relative;
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -158,6 +159,35 @@ body {
     transition: var(--transition-delay);
 }
 
+/* Move to Top Button */
+
+#scroll-top-button {
+    position: sticky;
+    top: 88%;
+    right: 4%;
+    float:right;
+    height: 40px;
+    width: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 20px;
+    z-index: 100;
+    cursor: pointer;
+    background-color: var(--primary-blue);
+    color: white;
+}
+#scroll-top-button:hover {
+    background: linear-gradient(to bottom, var(--primary-blue) 50%, var(--primary-orange) 50%);
+    background-size: 100% 200%;
+    background-position: bottom;
+    transition: all var(--transition-delay) ease-in-out;
+    color: var(--primary-blue);
+}
+#scroll-top-button:not(:hover) {
+    transition: all var(--transition-delay) ease-in-out;
+}
+/* Intro Section */
+
 .body-bg {
     height: var(--screen-height);
     width: var(--screen-width);
@@ -197,6 +227,7 @@ body {
     margin-inline: var(--inline-offset);
     margin-block: calc(var(--block-offset) / 2);
     padding-block: 10px;
+    padding-left: 20px;
     position: relative;
     display: flex;
     flex-direction: column;
@@ -204,8 +235,6 @@ body {
     justify-content: center;
     color: white;
     z-index: 30;
-    border-block: 5px solid #1C274F;
-    border-radius: 35px;
 }
 
 .intro-section-main-heading {
@@ -450,7 +479,7 @@ body {
     padding: 15px;
     box-sizing: border-box;
     color: rgb(0, 0, 0);
-    filter: drop-shadow(0 0 0.5rem rgba(0,0,0,0.8));
+    filter: drop-shadow(0 0 0.5rem rgba(0,0,0,0.5));
     cursor: pointer;
 }
 .course-col-heading{
@@ -465,7 +494,6 @@ body {
     box-shadow: 0 0 20px 0 rgba(0,0,0,0.2);
     transform: scale(1.02);
     transition: all var(--transition-delay);
-    pointer-events: auto;
 }
 .course-col:not(:hover){
     transition: all var(--transition-delay);
@@ -572,4 +600,10 @@ footer {
 .footer-social-icons a:hover {
     background-color: #dfaf61;
     transition: all var(--transition-delay);
+}
+
+.footer-map {
+    width: 250px;
+    height: 200px;
+    margin-top: 25px;
 }
