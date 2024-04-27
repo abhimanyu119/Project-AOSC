@@ -93,3 +93,11 @@ function addCourseAnimation() {
     });
 
 }
+
+window.addEventListener('DOMContentLoaded', () => {
+    const darkModeToggle = document.querySelector('.switch .look');
+    darkModeToggle.addEventListener('change', function() {
+        document.body.classList.toggle('dark-mode', this.checked);
+        console.log('Dark Mode Toggled');
+    });
+});
