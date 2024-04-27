@@ -158,7 +158,44 @@ body {
     background-color: var(--primary-blue);
     transition: var(--transition-delay);
 }
+/* Dark mode */
 
+body.dark-mode {
+    background-color: #333;
+    color: #fff;
+}
+body.dark-mode .header-container {
+    animation: navBG-dark linear forwards;
+    animation-timeline: view();
+    animation-range-start: 100vh;
+    animation-range-end: 200vh;
+}
+@keyframes navBG-dark {
+    100% {
+        background-color: rgba(0, 0, 0, 0.929);
+        opacity: 0.9;
+    }
+}
+body.dark-mode .navbar-list-element:hover {
+    text-shadow: blue 1px 1px 1px;
+}
+body.dark-mode .int-site-link-button button:hover {
+    background-color: var(--primary-orange);
+    box-shadow: var(--primary-blue) 0px 0px 5px 5px;
+    transition: var(--transition-delay);
+    color: black;
+}
+body.dark-mode .int-site-link-button button {
+    text-decoration: none;
+    padding: 17px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    color: white;
+    font-weight: bold;
+    background-color: var(--primary-blue);
+}
 /* Move to Top Button */
 
 #scroll-top-button {
