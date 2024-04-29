@@ -181,8 +181,10 @@ body.dark-mode .header-container {
 }
 @keyframes navBG-dark {
     100% {
-        background-color: rgba(0, 0, 0, 0.929);
+        /* background : linear-gradient(to bottom, #000000, #333333); */
+        background-color: black;
         opacity: 1;
+        transition: all 10s;
     }
 }
 body.dark-mode .navbar-list-element:hover {
@@ -251,17 +253,16 @@ body.dark-mode .scroll-left , body.dark-mode .scroll-right {
     transition: all var(--transition-delay);
 }
 body.dark-mode footer{
-    background-color: rgba(0, 0, 0, 0.919);
+    background: linear-gradient(to right, #000000, #111111, #222222, #333333, #444444);
     opacity: 1;
     transition: all var(--transition-delay);
 }
 body.dark-mode .image-slider {
-    background: linear-gradient(90deg, rgb(42, 42, 47) 0%, rgb(159, 197, 228) 48%,  rgb(159, 197, 228)  52%, rgb(42, 42, 47) 100%);
-    color: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(109, 148, 173) 48%,  rgb(109, 148, 173)  52%,rgb(0, 0, 0)  100%);
     transition: all var(--transition-delay);
 }
 body.dark-mode .course{
-    background-color: rgb(226, 223, 223);
+    background: linear-gradient(30deg, #e0e0e0 40%, #707070 60%);
     transition: all var(--transition-delay);
 }
 
