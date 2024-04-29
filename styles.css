@@ -173,7 +173,7 @@ body.dark-mode .header-container {
 @keyframes navBG-dark {
     100% {
         background-color: rgba(0, 0, 0, 0.929);
-        opacity: 0.9;
+        opacity: 1;
     }
 }
 body.dark-mode .navbar-list-element:hover {
@@ -239,7 +239,17 @@ body.dark-mode .scroll-left , body.dark-mode .scroll-right {
     color: var(--primary-orange);
     transition: all var(--transition-delay);
 }
-
+body.dark-mode footer{
+    background-color: rgba(0, 0, 0, 0.929);
+    opacity: 1;
+}
+body.dark-mode .image-slider {
+    background: linear-gradient(90deg, rgb(42, 42, 47) 0%, rgb(159, 197, 228) 48%,  rgb(159, 197, 228)  52%, rgb(42, 42, 47) 100%);
+    color: rgb(0, 0, 0);
+}
+body.dark-mode .course{
+    background-color: rgb(226, 223, 223);
+}
 
 /* Move to Top Button */
 
