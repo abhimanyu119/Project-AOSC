@@ -186,16 +186,61 @@ body.dark-mode .int-site-link-button button:hover {
     color: black;
 }
 body.dark-mode .int-site-link-button button {
-    text-decoration: none;
-    padding: 17px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    color: white;
-    font-weight: bold;
+    color: var(--primary-orange);
     background-color: var(--primary-blue);
+    transition: var(--transition-delay);
 }
+body.dark-mode .body-bg-wrapper{
+    background-color: var(--primary-blue);
+    /* background-color: black; */
+    opacity: 0.4;
+}
+body.dark-mode .intro-section-sub-heading{
+    /* color: var(--primary-blue); */
+    color: whitesmoke;
+}
+body.dark-mode .intro-section-text,body.dark-mode .intro-section-main-heading{
+    color: var(--primary-orange);
+    transition: var(--transition-delay);
+}
+body.dark-mode .intro-section-button{
+    background-color: var(--primary-blue);
+    color: var(--primary-orange);
+
+}
+body.dark-mode .intro-section-button:hover {
+    background-color: var(--primary-orange);
+    color: black;
+    box-shadow: var(--primary-blue) 0px 0px 5px 5px;
+    transition: var(--transition-delay);
+}
+
+.intro-section-button:not(:hover) {
+    transition: var(--transition-delay);
+}
+body.dark-mode .intro-text {
+    color: var(--primary-orange);
+    background-color: var(--primary-blue);
+    box-shadow: 5px 8px 7px 1px var(--primary-orange);
+    border: 2px solid var(--primary-orange);
+    transition: var(--transition-delay);
+}
+body.dark-mode .icon-links {
+    color: black;
+    transition: all var(--transition-delay);
+}
+
+body.dark-mode .icon-links:hover {
+    transition: all var(--transition-delay);
+    color:  whitesmoke;
+}
+
+body.dark-mode .scroll-left , body.dark-mode .scroll-right {  
+    color: var(--primary-orange);
+    transition: all var(--transition-delay);
+}
+
+
 /* Move to Top Button */
 
 #scroll-top-button {
@@ -375,7 +420,7 @@ body.dark-mode .int-site-link-button button {
 }
 .icon-links:hover {
     transition: all var(--transition-delay);
-    color:var(--primary-blue);
+    color: black;
 }
 
 .img-container {
