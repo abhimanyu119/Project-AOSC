@@ -181,10 +181,9 @@ body.dark-mode .header-container {
 }
 @keyframes navBG-dark {
     100% {
-        /* background : linear-gradient(to bottom, #000000, #333333); */
+        background: linear-gradient(to right, #000000, #111111, #222222, #333333, #444444);
         background-color: black;
         opacity: 1;
-        transition: all 10s;
     }
 }
 body.dark-mode .navbar-list-element:hover {
