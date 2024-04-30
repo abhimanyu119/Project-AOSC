@@ -258,8 +258,11 @@ body.dark-mode footer{
     transition: all var(--transition-delay);
 }
 body.dark-mode .image-slider {
-    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(109, 148, 173) 48%,  rgb(109, 148, 173)  52%,rgb(0, 0, 0)  100%);
+    background: rgb(48, 48, 48);
     transition: all var(--transition-delay);
+}
+body.dark-mode .image-section-heading {
+    color: #d1d1d1;
 }
 body.dark-mode .course{
     background: linear-gradient(30deg, #e0e0e0 40%, #707070 60%);
@@ -535,23 +538,7 @@ body.dark-mode .course{
 .slider-section[data-direction="right"] {
     --_animation-direction: reverse;
 }
-.image-slider-arrow {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    font-size: 2rem;
-    color: black;
-    isolation: isolate;
-    z-index: 100;
 
-}
-.image-slider-arrow.arrow-left {
-    left: 0;
-}
-.image-slider-arrow.arrow-right {
-    right: 0;
-}
 @keyframes scroll {
     to {
         transform: translate(calc(-50% - 1rem));
@@ -624,6 +611,7 @@ body.dark-mode .course{
     transition: all var(--transition-delay);
 }
 .course-col-text {
+    
     font-size: 1rem;
     font-weight: 300;
     margin: 10px 0;
@@ -724,7 +712,14 @@ footer {
         margin-inline: var(--inline-offset-1200px);
     
     }
-
+    @keyframes scroll {
+        to {
+            transform: translate(-180%);
+        }
+    }
+    .slider-section[data-animated=true] .slider-inner {
+        animation: scroll 30s var(--_animation-direction, forwards) linear infinite;
+    }
 
     .image-slider {
         padding-inline: var(--inline-offset-1200px);
