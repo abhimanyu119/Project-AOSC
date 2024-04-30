@@ -72,28 +72,6 @@ function resumeAnimation(element) {
     element.style.animationPlayState = "running";
 }
 
-/* Course Section*/
-
-const courseContent = document.querySelectorAll('.course-col');
-addCourseAnimation();
-
-function addCourseAnimation() {
-    courseContent.forEach((course) => {
-        course.classList.add("not-clicked");
-        course.addEventListener("click", () => {
-            courseContent.forEach((otherCourse) => {
-                if(otherCourse !== course) {
-                    otherCourse.classList.remove("clicked");
-                    otherCourse.classList.add("not-clicked");
-                }
-            });
-            course.classList.toggle("clicked");
-            course.classList.toggle("not-clicked");
-        });
-    });
-
-}
-
 /* Dark Mode Toggle*/
 
 window.addEventListener('DOMContentLoaded', () => {
