@@ -806,6 +806,29 @@ body.dark-mode .back::before {
     background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
 }
 
+body.dark-mode #scroll-top-button {
+    position: sticky;
+    top: 88%;
+    right: 4%;
+    float:right;
+    height: 40px;
+    width: 40px;
+    border: 2px solid white;
+    border-radius: 50%;
+    font-size: 20px;
+    z-index: 100;
+    cursor: pointer;
+    background:linear-gradient(0deg, rgba(0, 0, 0, 0.81) 50%, rgba(11,11,11,0.9332107843137255) 50%);
+    color: white;
+}
+body.dark-mode #scroll-top-button:hover {
+    background: linear-gradient(0deg, rgba(92,92,70,0.8099614845938375) 50%, rgba(11,11,11,0.9332107843137255) 50%);
+    background-size: 100% 200%;
+    background-position: bottom;
+    transition: all var(--transition-delay) ease-in-out;
+    color: black;
+    border: 2px solid black;
+}
 /* Media Queries */
 
 @media (max-width: 1200px) {
