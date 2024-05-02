@@ -178,21 +178,21 @@ body {
     float: right;
     height: 40px;
     width: 40px;
+    border: 2px solid white;
     border-radius: 50%;
     font-size: 20px;
     z-index: 100;
     cursor: pointer;
-    border: 2px solid black;
-    background: linear-gradient(0deg, rgb(103, 103, 103) 50%, rgb(103, 103, 103) 50%);
-    color: black;
+    background-color: var(--primary-blue);
+    color: white;
 }
 
 #scroll-top-button:hover {
-    background: linear-gradient(to bottom, rgb(103, 103, 103) 50%, rgb(118, 154, 201) 50%);
+    background: linear-gradient(to bottom, var(--primary-blue) 50%, var(--primary-orange) 50%);
     background-size: 100% 200%;
     background-position: bottom;
     transition: all var(--transition-delay) ease-in-out;
-    color: black;
+    color: var(--primary-blue);
 }
 
 #scroll-top-button:not(:hover) {
@@ -354,6 +354,60 @@ body {
     color: black;
 }
 
+.img-container {
+    width: 30%;
+    margin-top: 4vh;
+    height: 100%;
+    position: relative;
+}
+
+.intro-img {
+    border-radius: 50%;
+    height: 25vh;
+    aspect-ratio: 1;
+    margin-left: 1vw;
+    border: 2px solid black;
+    margin-top: 7vh;
+    position: relative;
+}
+@media screen and (max-width: 740px){
+    .intro-slider-container{
+      border: 2px solid black;
+     width: 100%;
+    }
+    .intro-text{
+        background-color: var(--primary-blue);
+        width: 100%;
+        margin: 0;
+        height: 100%;
+        position: absolute;
+        justify-content: center;
+        font-size: 2.6vh;
+        align-items: center;
+        justify-content: center;
+
+    }
+    .text{
+        width: 33%;
+        position:relative;
+        justify-content: center;
+        align-items: center;
+        margin-top: 8vw;
+    }
+    .img-container{
+        position:absolute;
+        right: 0;
+        top: 0;}
+    .intro-img{
+        border-radius: 50%;
+        height: 18vh;
+        aspect-ratio: 1;
+        border: 2px solid black;
+        position: relative;
+        right: 0;
+    }
+    
+}
 
 .scroll-left {
     position: absolute;
@@ -537,7 +591,7 @@ body {
     position: absolute;
     width: 99%;
     height: 99%;
-    background-image: url(media/card-bg.webp);
+    background-image: url(media/card-bg.jpg);
     background-size: cover;
     filter: brightness(0.8);
     border-radius: 5px;
@@ -722,9 +776,9 @@ body.dark-mode .header-container {
 
 @keyframes navBG-dark {
     100% {
-        /* background: linear-gradient(to right, #000000, #111111, #222222, #333333, #444444); */
+        background: linear-gradient(to right, #000000, #111111, #222222, #333333, #444444);
         background-color: black;
-        opacity: 0.99;
+        opacity: 1;
     }
 }
 
@@ -822,7 +876,7 @@ body.dark-mode .course {
 }
 
 body.dark-mode .back-content {
-    background-image: url(media/card-bg-dark.webp);
+    background-image: url(media/card-bg-dark.webp);    
     color: white;
     transition: all var(--transition-delay);
 }
@@ -838,16 +892,24 @@ body.dark-mode .back::before {
 }
 
 body.dark-mode #scroll-top-button {
+    position: sticky;
+    top: 88%;
+    right: 4%;
+    float:right;
+    height: 40px;
+    width: 40px;
     border: 2px solid white;
-    background: linear-gradient(0deg, rgb(103, 103, 103) 50%, rgb(103, 103, 103) 50%);
+    background:linear-gradient(0deg, rgb(103, 103, 103) 50%, rgb(103, 103, 103) 50%);
     color: white;
 }
 
 body.dark-mode #scroll-top-button:hover {
-    background: linear-gradient(to bottom, rgb(103, 103, 103) 50%, var(--primary-orange) 50%);
+    background: linear-gradient(0deg, rgba(92,92,70,0.8099614845938375) 50%, rgba(11,11,11,0.9332107843137255) 50%);
     background-size: 100% 200%;
     background-position: bottom;
     transition: all var(--transition-delay) ease-in-out;
+    color: black;
+    border: 2px solid black;
 }
 
 /* Media Queries */
