@@ -720,7 +720,7 @@ body {
     color: white;
     font-family: "Poppins", Sans-serif;
     font-size: 2rem;
-    text-align: center;h
+    text-align: center;
 }
 .message-contariner-1{
     
@@ -756,7 +756,7 @@ footer {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    background-color: #2c3b6f;
+    background: linear-gradient(to right, #040924, #11286e);
     color: white;
     margin: 0;
     padding: var(--block-offset) var(--inline-offset);
@@ -780,13 +780,13 @@ footer {
     color: #dfaf61;
 }
 
-.footer-aosc-heading {
+/* .footer-aosc-heading {
     font-size: 2.5rem;
     background: linear-gradient(180deg, rgba(255, 158, 0, 1) 0%, rgba(127, 155, 255, 1) 100%);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-}
+} */
 
 .footer-socials {
     display: flex;
@@ -797,16 +797,25 @@ footer {
 
 #footer-socials-links {
     text-decoration: none;
-    font-size: clamp(16px, 1.25vw, 24px);
+    font-size: clamp(30px, 1.25vw, 24px);
     color: white;
 }
-
+#footer-socials-links:hover {
+    color: rgb(20, 20, 20);
+    transition: all var(--transition-delay);
+}
+.footer-section-text li:hover{
+    text-shadow: var(--primary-orange) 1px 1px 1px;
+    transition: all var(--transition-delay);
+    cursor: pointer;
+}
 .footer-section-text {
     list-style-type: none;
     font-size: clamp(16px, 1.25vw, 24px);
     margin-inline: 20px;
     padding: 10px;
-    text-align: center;
+    display: block;
+    text-align: left;
     line-height: 2rem;
 }
 
@@ -934,6 +943,14 @@ body.dark-mode footer {
 
 body.dark-mode .image-slider {
     background: rgb(48, 48, 48);
+    transition: all var(--transition-delay);
+}
+body.dark-mode #footer-socials-links {
+    color: rgb(99, 97, 97);
+    transition: all var(--transition-delay);
+}
+body.dark-mode #footer-socials-links:hover {
+    color: whitesmoke;
     transition: all var(--transition-delay);
 }
 
