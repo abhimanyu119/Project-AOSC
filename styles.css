@@ -412,10 +412,10 @@ body {
     display: block;
 }
 .text{
-    font-size: 2.5vh;
+    font-size: clamp(16px, 1vw + 0.25rem, 24px);
     font-family: 'Times New Roman', Times, serif;
     color: white;
-    padding-left: 1vh;
+    padding-inline: 1.5vw;
     display: block;
 }
 .icon{
@@ -482,7 +482,7 @@ body {
     width: var(--screen-width);
     padding-inline: var(--inline-offset);
     padding-block: var(--block-offset);
-    background: linear-gradient(90deg, rgba(211, 210, 227, 1) 0%, rgba(192, 213, 229, 1) 48%, rgba(192, 213, 229, 1) 52%, rgba(211, 210, 227, 1) 100%);
+    background-color: white;
     color: rgb(0, 0, 0);
 }
 
@@ -542,21 +542,15 @@ body {
     text-align: center;
     padding-block: var(--block-offset);
     padding-inline: var(--inline-offset);
-    background-color: white;
+    background: linear-gradient(90deg, rgba(211, 210, 227, 1) 0%, rgba(192, 213, 229, 1) 48%, rgba(192, 213, 229, 1) 52%, rgba(211, 210, 227, 1) 100%);
 }
 
 .course-section-main-heading {
     font-size: var(--fontsize-main-heading);
     font-weight: 600;
     font-family: "Poppins", Sans-serif;
+    margin-block: 50px;
     color: var(--primary-blue);
-}
-
-.course-section-sub-heading {
-    color: var(--primary-orange);
-    font-size: var(--fontsize-sub-heading);
-    font-weight: 300;
-    margin: 0;
 }
 
 .courses-container {
@@ -714,7 +708,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 80vh;
-    width: 100vw;
+    width: var(--screen-width);
     background-color: #ffffff;
     font-family: "Poppins", Sans-serif;
     font-size: 2rem;
@@ -722,6 +716,7 @@ body {
 }
 .message-sub-container{   
     align-items: center;
+    height: fit-content;
     background-color: rgb(223,223,223);
     color: white;
     font-family: "Poppins", Sans-serif;
