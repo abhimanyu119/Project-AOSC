@@ -1,4 +1,4 @@
-// Dropdown Toggle 
+/* Dropdown Toggle */
 
 const dropdown_icon = document.querySelector('.dropdown-button');
 dropdown_icon.addEventListener("click", dropdownToggle);
@@ -11,3 +11,12 @@ function dropdownToggle() {
         dropdown_menu.style.display = "none";
     }
 }
+
+/* Dark Mode Toggle */
+
+window.addEventListener('DOMContentLoaded', () => {
+    const darkModeToggle = document.querySelector('.switch .look');
+    darkModeToggle.addEventListener('change', function() {
+        document.body.classList.toggle('dark-mode', this.checked);
+    });
+});
