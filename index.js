@@ -1,4 +1,4 @@
-// Dropdown Toggle 
+/* Dropdown Toggle */ 
 
 const dropdown_icon = document.querySelector('.dropdown-button');
 dropdown_icon.addEventListener("click", dropdownToggle);
@@ -12,7 +12,7 @@ function dropdownToggle() {
     }
 }
 
-// Intro Slider
+/* Intro Slider */
 
 const slides = document.querySelectorAll('.intro-slider-container');
 let counter = 0;
@@ -86,7 +86,7 @@ function resumeAnimation(element) {
     element.style.animationPlayState = "running";
 }
 
-/* Dark Mode Toggle*/
+/* Dark Mode Toggle */
 
 window.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.querySelector('.switch .look');
