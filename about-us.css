@@ -81,12 +81,12 @@ body {
 
 .navbar-list-element:hover {
     transform: scale(1.2);
-    transition: all var(--transition-delay);
-    text-shadow: var(--primary-orange) 1px 1px 1px;
+    text-shadow: var(--primary-orange) 1px 1px 10px;
+    transition: transform var(--transition-delay);
 }
 
 .navbar-list-element:not(:hover) {
-    transition: all var(--transition-delay);
+    transition: transform var(--transition-delay);
 }
 
 .navbar-list-element-link {
@@ -127,7 +127,8 @@ body {
 .int-site-link-button button:not(:hover) {
     transition: var(--transition-delay);
 }
-/* Dark Mode Toggle */
+
+/*Dark Mode Toggle */
 
 .switch {
     font-size: 17px;
@@ -152,7 +153,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #73C0FC;
+    background-color: #5793c1;
     transition: .4s;
     border-radius: 30px;
 }
@@ -160,11 +161,11 @@ body {
 .slider:before {
     position: absolute;
     content: "";
-    height: 21px;
-    width: 21px;
+    height: 25px;
+    width: 25px;
     border-radius: 20px;
-    left: 2px;
-    bottom: 2px;
+    left: 0px;
+    bottom: 0px;
     z-index: 2;
     background-color: #e8e8e8;
     transition: .4s;
@@ -173,7 +174,7 @@ body {
 .sun svg {
     position: absolute;
     top: 3px;
-    left: 36px;
+    left: 40px;
     z-index: 1;
     width: 20px;
     height: 20px;
@@ -197,7 +198,7 @@ body {
 }
 
 .input:checked + .slider:before {
-    transform: translateX(35px);
+    transform: translateX(39px);
 }
 
 /* Dropdown Menu */
@@ -347,9 +348,7 @@ body {
 .about-us-text{
     font-size: 1.5rem;
     letter-spacing: 2px;
-    font-family:'Times New Roman', Times, serif;
     margin-block: 20px;
-    color: white;
 }
 .about-us-heading{
     font-size: 2.5rem;
@@ -358,6 +357,7 @@ body {
     margin-block: 20px;
     color: #C59443;
 }
+
 /* Course Section */
 
 .course {
@@ -430,7 +430,7 @@ body {
     width: 300px;
     height: 160%;
     background: linear-gradient(90deg, transparent, #ff8040, #ff8040, #ff8040, #ff8040, transparent);
-    animation: rotation_481 5000ms infinite linear;
+    animation: rotation 5000ms infinite linear;
 }
 
 .back-content {
@@ -456,7 +456,7 @@ body {
     transition: all calc(2*(var(--transition-delay)));
 }
 
-@keyframes rotation_481 {
+@keyframes rotation {
     0% {
         transform: rotateZ(0deg);
     }
@@ -568,27 +568,46 @@ footer {
 #footer-socials-links {
     text-decoration: none;
     font-size: clamp(30px, 1.25vw, 24px);
-    color: white;
+    color: rgb(150, 150, 150);
 }
 #footer-socials-links:hover {
-    color: rgb(20, 20, 20);
+    color: white;
+    scale: 1.2;
+    transition: all var(--transition-delay);
+}
+#footer-socials-links:not(:hover) {
     transition: all var(--transition-delay);
 }
 .footer-section-text li:hover{
-    text-shadow: var(--primary-orange) 1px 1px 1px;
+    text-shadow: var(--primary-orange) 1px 1px 10px;
     transition: all var(--transition-delay);
     cursor: pointer;
 }
 .footer-section-text {
     list-style-type: none;
-    font-size: clamp(16px, 1.25vw, 24px);
+    font-size: clamp(16px, 1.2vw + 0.2rem, 24px);
     margin-inline: 20px;
     padding: 10px;
     display: block;
-    text-align: left;
+    text-align: center;
     line-height: 2rem;
 }
+.footer-section-text li a {
+    text-decoration: none;
+    color: white;
 
+}
+.footer-contact-content-container {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    text-align: left;
+    font-size: clamp(16px, 1.2vw + 0.2rem, 24px);
+}
+.footer-contact-icon {
+    font-size: 1.5rem;
+    color: #dfaf61;
+}
 .footer-map {
     width: 250px;
     height: 150px;
