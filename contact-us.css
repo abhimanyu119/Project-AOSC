@@ -371,6 +371,35 @@ body {
     color: #dfaf61;
 }
 
+/* map */
+.map{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 1.5rem;
+    background: linear-gradient(90deg, rgba(211, 210, 227, 1) 0%, rgba(192, 213, 229, 1) 48%, rgba(192, 213, 229, 1) 52%, rgba(211, 210, 227, 1) 100%);
+}
+#map-heading{
+    text-align: center;
+    font-size: 2.5rem;
+    color: white;
+    margin: 0;
+    padding-top: 20px;
+    background: linear-gradient(90deg, rgba(211, 210, 227, 1) 0%, rgba(192, 213, 229, 1) 48%, rgba(192, 213, 229, 1) 52%, rgba(211, 210, 227, 1) 100%);
+}
+.contact-map {
+    width: 800px;
+    height: 480px;
+    margin: 35px;
+    
+}
+.contact-section {
+   
+    gap: 1.5rem;
+    margin: 10px;
+    padding: 0;
+}
+
 /* Footer section */
 
 footer {
