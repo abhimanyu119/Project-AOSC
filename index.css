@@ -83,6 +83,10 @@ body {
     text-shadow: var(--primary-orange) 1px 1px 10px;
     transition: transform var(--transition-delay);
 }
+.navbar-list-element.link-active {
+    transform: scale(1.2);
+    text-shadow: var(--primary-orange) 1px 1px 10px;
+}
 
 .navbar-list-element:not(:hover) {
     transition: transform var(--transition-delay);
@@ -424,6 +428,7 @@ body {
 }
 
 /* Intro slider section */
+
 .intro-slider {
     align-items: center;
     width: 50%;
@@ -643,8 +648,7 @@ body {
     transition: all var(--transition-delay);
 }
 
-.front,
-.back {
+.front, .back {
     background-color: rgb(197, 197, 197);
     position: absolute;
     width: 100%;
@@ -769,7 +773,7 @@ body {
     }
 }
 
-/* message */
+/* Message */
 
 .message-main-container {
     display: flex;
