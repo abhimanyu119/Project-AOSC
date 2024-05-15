@@ -84,6 +84,10 @@ body {
     text-shadow: var(--primary-orange) 1px 1px 10px;
     transition: transform var(--transition-delay);
 }
+.navbar-list-element.link-active {
+    transform: scale(1.2);
+    text-shadow: var(--primary-orange) 1px 1px 10px;
+}
 
 .navbar-list-element:not(:hover) {
     transition: transform var(--transition-delay);
