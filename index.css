@@ -348,6 +348,28 @@ body {
     justify-content: center;
     color: white;
     z-index: 30;
+    animation: fadeVertical15 1s ease-in-out;
+}
+
+@keyframes fadeVertical15 {
+    0% {
+        transform: translateY(15%);
+        transform: opacity(0);
+    }
+    100% {
+        transform: translateY(0);
+        transform: opacity(1);
+    }
+}
+@keyframes fadeVertical30 {
+    0% {
+        transform: translateY(30%);
+        transform: opacity(0);
+    }
+    100% {
+        transform: translateY(0);
+        transform: opacity(1);
+    }
 }
 
 .intro-section-main-heading {
@@ -355,6 +377,7 @@ body {
     font-weight: bold;
     font-family: "Josefin Sans", Sans-serif;
     margin-block: 20px;
+    animation: fadeVertical30 1s ease-in-out;
 }
 
 .intro-section-sub-heading {
@@ -385,6 +408,8 @@ body {
     cursor: pointer;
     color: var(--primary-blue);
     background-color: var(--primary-orange);
+    
+    animation: fadeVertical30 1s ease-in-out;
 }
 
 .intro-section-button:hover {
