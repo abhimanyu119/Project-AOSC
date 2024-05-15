@@ -333,42 +333,37 @@ body {
 .contact-form {
     height: max-content;
     width: 100%;
+    background-color: lightslategray;   
+    text-align: center;
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    background-color: lightslategray;
-    gap: 1.5rem;
-    margin: 0;
-    padding: 10px;
+    align-items: center;
+    padding: 10vh;
 }
 .contact-heading {
+    margin-block: var(--block-offset);
+   margin-inline: var(--inline-offset);
     text-align: left;
     font-size: 2.5rem;
-    color: white;
-    
+    color: white; 
+}
+label{
+    display: inline-block;
+    width: 30%;
 }
 .contact-section {
-    display: flex;
-    flex-direction: column;
-    
-    align-items: center;
-    gap: 1.5rem;
-    margin: 10px;
-    padding: 0;
+    width: 50%;
+    padding: 10vh;
+    border: 2px solid white;    
 }
-
 .contact-form-group {
-    /* display: flex;
-    flex-direction: column;
-    justify-content: center; */
     align-items: center;
     gap: 1.5rem;
-    margin: 10px;
-    padding: 0;
+    margin: 2vh;    
+
 }
-.contact-icon {
-    font-size: 1.5rem;
-    color: #dfaf61;
+#message { 
+    height: 15vh;
 }
 
 /* Footer section */
