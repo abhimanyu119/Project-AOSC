@@ -133,7 +133,6 @@ body {
 }
 
 /*Dark Mode Toggle */
-
 .switch {
     font-size: 17px;
     position: relative;
@@ -141,7 +140,7 @@ body {
     width: 64px;
     height: 25px;
     top: 15px;
-    left: 10px;
+    right: -50px;
 }
 
 .switch input {
@@ -509,6 +508,11 @@ footer {
     text-align: left;
     font-size: clamp(16px, 1.2vw + 0.2rem, 24px);
 }
+.footer-contact-text a {
+    text-decoration: none;
+    color: white;
+
+}
 .footer-contact-icon {
     font-size: 1.5rem;
     color: #dfaf61;
@@ -740,7 +744,9 @@ body.dark-mode .message-text{
     .slider-section {
         max-width: 1000px;
     }
-
+    .switch {
+        right: -20px;
+    }
     .course {
         padding-inline: var(--inline-offset-1200px);
     }

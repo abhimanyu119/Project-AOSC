@@ -133,7 +133,6 @@ body {
 }
 
 /*Dark Mode Toggle */
-
 .switch {
     font-size: 17px;
     position: relative;
@@ -141,7 +140,7 @@ body {
     width: 64px;
     height: 25px;
     top: 15px;
-    left: 10px;
+    right: -50px;
 }
 
 .switch input {
@@ -337,23 +336,60 @@ body {
 .contact-form {
     height: max-content;
     width: 100%;
-    background-color: lightslategray;   
-    text-align: center;
+    background: linear-gradient(90deg, rgba(211, 210, 227, 1) 0%, rgba(192, 213, 229, 1) 48%, rgba(192, 213, 229, 1) 52%, rgba(211, 210, 227, 1) 100%);  
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 10vh;
+}
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 1rem;
+    margin: 2vh;
+    border: 2px solid white;
+    background-color: var(--primary-blue);
+    color: white;
+    border-radius: 10px;
 }
 .contact-heading {
     margin-block: var(--block-offset);
-   margin-inline: var(--inline-offset);
+    margin-inline: var(--inline-offset);
     text-align: left;
     font-size: 2.5rem;
     color: white; 
 }
-label{
+.contact-form label {
     display: inline-block;
     width: 30%;
+}
+.contact-form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: var(--primary-blue);
+    color: white;
+}
+.contact-form button {
+    width: 40%;
+    margin-inline: auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: var(--primary-orange);
+    color: white;
+    cursor: pointer;
+    transition: all var(--transition-delay);
+}
+.contact-form-buttons {
+    display: flex;
+    justify-content: space-between;
+}
+.contact-form-buttons .button1 {
+    background-color: var(--primary-orange);
+}
+.contact-form-buttons .button2 {
+    background-color: var(--primary-blue);
 }
 .contact-section {
     width: 50%;
@@ -370,33 +406,45 @@ label{
     height: 15vh;
 }
 
-/* map */
+/* Map */
+
 .map{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    gap: 1.5rem;
+    align-items: center;
+    gap: 1rem;
     background: linear-gradient(90deg, rgba(211, 210, 227, 1) 0%, rgba(192, 213, 229, 1) 48%, rgba(192, 213, 229, 1) 52%, rgba(211, 210, 227, 1) 100%);
 }
 #map-heading{
     text-align: center;
     font-size: 2.5rem;
-    color: white;
+    color: var(--primary-blue);
     margin: 0;
-    padding-top: 20px;
+    padding: var(--block-offset) var(--inline-offset);
     background: linear-gradient(90deg, rgba(211, 210, 227, 1) 0%, rgba(192, 213, 229, 1) 48%, rgba(192, 213, 229, 1) 52%, rgba(211, 210, 227, 1) 100%);
 }
 .contact-map {
-    width: 800px;
-    height: 480px;
-    margin: 35px;
-    
+    width: 1100px;
+    height: 500px;
+    margin-inline: auto;
 }
 .contact-section {
-   
-    gap: 1.5rem;
-    margin: 10px;
-    padding: 0;
+    display: grid;
+    place-items: center;
+    border: none;
+    padding: var(--block-offset) var(--inline-offset);
+    text-wrap: nowrap;
+}
+.contact-section-heading {
+    font-size: 2.5rem;
+    color: var(--primary-blue);
+    margin: 20px;
+}
+.contact-section-text {
+    font-size: 1.5rem;
+    color: var(--primary-orange);
+    margin: 20px;
 }
 
 /* Footer section */
@@ -478,6 +526,11 @@ footer {
     gap: 2rem;
     text-align: left;
     font-size: clamp(16px, 1.2vw + 0.2rem, 24px);
+}
+.footer-contact-text a {
+    text-decoration: none;
+    color: white;
+
 }
 .footer-contact-icon {
     font-size: 1.5rem;
@@ -702,7 +755,9 @@ body.dark-mode .message-text{
     .slider-section[data-animated=true] .slider-inner {
         animation: scroll 30s var(--_animation-direction, forwards) linear infinite;
     }
-
+    .switch {
+        right: -20px;
+    }
     .image-slider {
         padding-inline: var(--inline-offset-1200px);
     }
@@ -718,7 +773,10 @@ body.dark-mode .message-text{
     .courses-container {
         gap: 1.1rem;
     }
-
+    .contact-map {
+        width: 800px;
+        height: 400px;
+    }
     footer {
         padding-inline: var(--inline-offset-1200px);
     }
