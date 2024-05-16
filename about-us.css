@@ -374,6 +374,13 @@ body {
     margin-block: var(--block-offset);
     margin-inline: var(--inline-offset);
     position: relative;
+    color: black;
+    font-size: 1.5rem;
+}
+.about-us-sub-text-1{
+    margin-block: var(--block-offset);
+    margin-inline: var(--inline-offset);
+    position: relative;
     color: white;
     font-size: 1.5rem;
 }
@@ -391,7 +398,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    background-color: gray;
+    background: linear-gradient(to right, rgb(135, 135, 148), rgb(71, 127, 149));
     padding-block: 10px;
     padding-inline: 20px;
     position: relative;
@@ -417,6 +424,12 @@ body {
     width: 60%;
     margin-right: auto;
 
+}
+.our-vision , .our-mission, .OUR-CORE-VALUES{
+    background-color: whitesmoke;
+    border-radius: 15%;
+    box-shadow: 2px 2px 50px 5px black;
+   
 }
 .child-heading{
     font-size: 2rem;
