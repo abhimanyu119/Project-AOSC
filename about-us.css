@@ -372,7 +372,6 @@ body {
 .about-us-sub-text{
     margin-block: var(--block-offset);
     margin-inline: var(--inline-offset);
-    position: relative;
     color: black;
     font-size: 1.5rem;
 }
@@ -380,7 +379,7 @@ body {
     margin-block: var(--block-offset);
     margin-inline: var(--inline-offset);
     position: relative;
-    color: white;
+    color: black;
     font-size: 1.5rem;
 }
 .About-us-section-main-heading{
@@ -396,39 +395,43 @@ body {
 .About-Us-main-container{
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    background: linear-gradient(to right, rgb(135, 135, 148), rgb(71, 127, 149));
+    background: linear-gradient(to right, rgb(191, 191, 198), rgb(128, 183, 205));
     padding-block: 10px;
     padding-inline: 20px;
-    position: relative;
     color: white;
 }
 .our-mission{
-    font-size: 1.5rem;
     letter-spacing: 3px;
     /* margin-block: 20px; */
-   margin-right: auto;
-    width: 60%;
+    margin-right: auto;
+    display: flex;
 }
 .our-vision {
-    font-size: 1.5rem;
+    font-size:  6px;
     letter-spacing: 3px;
-    /* margin-block: 20px; */
-    width: 60%;
+    display: flex;
+    margin-block: 20px;
     margin-left: auto;
-}
-.OUR-CORE-VALUES{
-    font-size: 1.5rem;
-    letter-spacing: 3px;
-    width: 60%;
-    margin-right: auto;
 
 }
-.our-vision , .our-mission, .OUR-CORE-VALUES{
-    background-color: whitesmoke;
-    border-radius: 15%;
-    box-shadow: 2px 2px 50px 5px black;
-   
+.OUR-CORE-VALUES{
+    font-size: 6px;
+    letter-spacing: 3px;
+    display: flex;
+    margin-block: 20px;
+    margin-right: auto;
+}
+.image-1{
+    margin-top: 2vh;    
+    margin-right: auto;
+}
+.image-2{
+    margin-left: auto;
+    margin-top: 6vh;
+}
+.image-3{
+    margin-top: 14vh;
+    margin-right: auto;
 }
 .child-heading{
     font-size: 2rem;
@@ -551,12 +554,23 @@ body.dark-mode .header-container {
     animation-range-end: 200vh;
     transition: all var(--transition-delay);
 }
+body.dark-mode .About-Us-main-container{
+    background: linear-gradient(to right, #232323, #3f3f3f, #444444, #7b7b7b, #444444);
+    transition: all var(--transition-delay);
+}
+body.dark-mode .about-us-sub-text{
+    color: white;
+
+}
 
 @keyframes navBG-dark {
     100% {
         background-color: black;
         opacity: 0.99;
     }
+}
+body.dark-mode .about-us-sub-text-1{
+    color: white;
 }
 
 body.dark-mode .navbar-list-element:hover {
@@ -618,33 +632,7 @@ body.dark-mode .intro-section-button:hover {
     color: black;
     box-shadow: var(--primary-blue) 0px 0px 5px 5px;
     transition: all var(--transition-delay);
-}
-body.dark-mode .intro-img {
-    border: 3px solid white;
-    z-index: 20;
-}
-body.dark-mode .intro-text {
-    color: var(--primary-orange);
-}
-body.dark-mode .intro-slider-container{
-    background: linear-gradient(to right, #000000, #111111, #222222, #333333, #444444);
-    box-shadow: 2px 1px 5px 7px black;
-}
-body.dark-mode .icon-links {
-    color: rgb(99, 97, 97);
-    transition: all var(--transition-delay);
-}
 
-body.dark-mode .icon-links:hover {
-    color: whitesmoke;
-    transition: all var(--transition-delay);
-}
-
-body.dark-mode .scroll-left,
-body.dark-mode .scroll-right {
-    color: var(--primary-orange);
-    transition: all var(--transition-delay);
-}
 
 body.dark-mode footer {
     background-color: rgb(20, 20, 20);
@@ -663,31 +651,6 @@ body.dark-mode #footer-socials-links {
 body.dark-mode #footer-socials-links:hover {
     color: whitesmoke;
     transition: all var(--transition-delay);
-}
-
-body.dark-mode .image-section-heading {
-    color: #d1d1d1;
-}
-
-body.dark-mode .course {
-    background: linear-gradient(30deg, #e0e0e0 40%, #707070 60%);
-    transition: all var(--transition-delay);
-}
-
-body.dark-mode .back-content {
-    background-image: url(media/card-bg-dark.webp);    
-    color: white;
-    transition: all var(--transition-delay);
-}
-
-body.dark-mode .front,
-body.dark-mode .back {
-    background-color: #3b3b3b;
-    transition: all var(--transition-delay);
-}
-
-body.dark-mode .back::before {
-    background: linear-gradient(90deg, transparent, #ff9966, #ff9966, #ff9966, #ff9966, transparent);
 }
 
 body.dark-mode #scroll-top-button {
@@ -710,19 +673,7 @@ body.dark-mode #scroll-top-button:hover {
     color: black;
     border: 2px solid black;
 }
-body.dark-mode .message-main-container{
-    background: linear-gradient(190deg, #e0e0e0 40%, #707070 60%);
-    transition: all var(--transition-delay);
-}
-body.dark-mode .message-sub-container{ 
-    background: linear-gradient(to right, #000000, #111111, #222222, #333333, #444444);
-    transition: all var(--transition-delay);
-}
-body.dark-mode .message-heading{
-    color: #dfaf61;}
-body.dark-mode .message-text{
-    color: #d1d1d1;
-}
+
 
 /* Media Queries */
 
@@ -745,27 +696,8 @@ body.dark-mode .message-text{
             transform: translate(-180%);
         }
     }
-
-    .slider-section[data-animated=true] .slider-inner {
-        animation: scroll 30s var(--_animation-direction, forwards) linear infinite;
-    }
-
-    .image-slider {
-        padding-inline: var(--inline-offset-1200px);
-    }
-
-    .slider-section {
-        max-width: 1000px;
-    }
     .switch {
         right: -20px;
-    }
-    .course {
-        padding-inline: var(--inline-offset-1200px);
-    }
-
-    .courses-container {
-        gap: 1.1rem;
     }
 
     footer {
