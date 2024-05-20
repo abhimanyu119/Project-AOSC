@@ -333,7 +333,7 @@ body {
 
 .contact-form {
     position: relative;
-    top: -40px;
+    top: 0px;
     width: 100%;
     background: transparent;  
     display: flex;
@@ -602,6 +602,19 @@ body.dark-mode .body-bg-wrapper {
     background-color: var(--primary-blue);
     opacity: 0.4;
     transition: all var(--transition-delay);
+}
+body.dark-mode .body-bg img {
+    filter: brightness(0.3);
+    transition: all var(--transition-delay);
+}
+body.dark-mode .map {
+    background-color: rgb(77, 81, 93);
+}
+body.dark-mode #map-heading, body.dark-mode .contact-section-heading, body.dark-mode .contact-heading {
+    color: #dfaf61;
+}
+body.dark-mode .contact-section-text {
+    color: rgb(175, 175, 175);
 }
 
 body.dark-mode .intro-section-sub-heading {
