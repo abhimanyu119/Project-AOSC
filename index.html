@@ -1,339 +1,478 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AOSC India</title>
-    <link rel="icon" type="image/x-icon" href="media\favicon.ico">
-    <link rel="stylesheet" href="index.css">
-    <script src="https://kit.fontawesome.com/ffa6b235dc.js" defer crossorigin="anonymous"></script>
-</head>
+    <link rel="icon" type="image/x-icon" href="media\favicon.ico" />
+    <link rel="stylesheet" href="index.css" />
+    <script
+      src="https://kit.fontawesome.com/ffa6b235dc.js"
+      defer
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <nav class="header-container">
-        <div class="aosc-logo logo1">
-            <a href="index.html">
-                <img src="media\cropped-AOSC-logo-White-06.png" alt="Logo" loading="lazy">
-            </a>
+      <div class="aosc-logo logo1">
+        <a href="index.html">
+          <img
+            src="media\cropped-AOSC-logo-White-06.png"
+            alt="Logo"
+            loading="lazy"
+          />
+        </a>
+      </div>
+      <div class="navbar-container">
+        <ul class="navbar-list">
+          <li class="navbar-list-element link-active">
+            <a class="navbar-list-element-link" href="index.html">Home</a>
+          </li>
+          <li class="navbar-list-element">
+            <a class="navbar-list-element-link" href="about-us.html"
+              >About Us</a
+            >
+          </li>
+          <li class="navbar-list-element">
+            <a class="navbar-list-element-link" href="services.html"
+              >Services</a
+            >
+          </li>
+          <li class="navbar-list-element">
+            <a class="navbar-list-element-link" href="contact-us.html"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <div class="int-site-link-button">
+          <a href="https://aoscaustralia.com/" target="_self">
+            <button>Switch to International</button>
+          </a>
         </div>
-        <div class="navbar-container">
-            <ul class="navbar-list">
-                <li class="navbar-list-element link-active"><a class="navbar-list-element-link" href="index.html">Home</a></li>
-                <li class="navbar-list-element"><a class="navbar-list-element-link" href="about-us.html">About Us</a></li>
-                <li class="navbar-list-element"><a class="navbar-list-element-link" href="services.html">Services</a></li>
-                <li class="navbar-list-element"><a class="navbar-list-element-link" href="contact-us.html">Contact Us</a></li>
+        <div class="switch">
+          <label class="look">
+            <span class="sun"
+              ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                <g fill="#ffd43b">
+                  <circle r="5" cy="12" cx="12"></circle>
+                  <path
+                    d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"
+                  ></path>
+                </g></svg></span>
+            <span class="moon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                <path
+                  d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z">
+                </path>
+              </svg>
+            </span>
+            <input type="checkbox" class="input" />
+            <span class="slider"></span>
+          </label>
+        </div>
+        <div class="dropdown-container">
+          <button class="dropdown-button" onclick="toggleDropdown()">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="navbar-dropdown-list">
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about-us.html">About Us</a></li>
+              <li><a href="services.html">Services</a></li>
+              <li><a href="contact-us.html">Contact Us</a></li>
             </ul>
-            <div class="int-site-link-button">
-                <a href="https://aoscaustralia.com/" target="_self">
-                    <button>Switch to International</button>
-                </a>
-            </div>
-            <div class="switch">
-                <label class="look">
-                    <span class="sun"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><g fill="#ffd43b"><circle r="5" cy="12" cx="12"></circle><path d="m21 13h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm-17 0h-1a1 1 0 0 1 0-2h1a1 1 0 0 1 0 2zm13.66-5.66a1 1 0 0 1 -.66-.29 1 1 0 0 1 0-1.41l.71-.71a1 1 0 1 1 1.41 1.41l-.71.71a1 1 0 0 1 -.75.29zm-12.02 12.02a1 1 0 0 1 -.71-.29 1 1 0 0 1 0-1.41l.71-.66a1 1 0 0 1 1.41 1.41l-.71.71a1 1 0 0 1 -.7.24zm6.36-14.36a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm0 17a1 1 0 0 1 -1-1v-1a1 1 0 0 1 2 0v1a1 1 0 0 1 -1 1zm-5.66-14.66a1 1 0 0 1 -.7-.29l-.71-.71a1 1 0 0 1 1.41-1.41l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.29zm12.02 12.02a1 1 0 0 1 -.7-.29l-.66-.71a1 1 0 0 1 1.36-1.36l.71.71a1 1 0 0 1 0 1.41 1 1 0 0 1 -.71.24z"></path></g></svg></span>
-                    <span class="moon"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m223.5 32c-123.5 0-223.5 100.3-223.5 224s100 224 223.5 224c60.6 0 115.5-24.2 155.8-63.4 5-4.9 6.3-12.5 3.1-18.7s-10.1-9.7-17-8.5c-9.8 1.7-19.8 2.6-30.1 2.6-96.9 0-175.5-78.8-175.5-176 0-65.8 36-123.1 89.3-153.3 6.1-3.5 9.2-10.5 7.7-17.3s-7.3-11.9-14.3-12.5c-6.3-.5-12.6-.8-19-.8z"></path></svg></span>   
-                    <input type="checkbox" class="input">
-                    <span class="slider"></span>
-                </label>
-            </div>
-            <div class="dropdown-container">
-                <button class="dropdown-button" onclick="toggleDropdown()">
-                    <i class="fa-solid fa-bars"></i>
-                </button>
-                <div class="navbar-dropdown-list">
-                    <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about-us.html">About Us</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                    </ul>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </nav>
     <div class="body-bg">
-        <img src="media/homepage-bg.jpeg" alt="background" loading="lazy">
-        <div class="body-bg-wrapper">
-        </div>
+      <img src="media/homepage-bg.jpeg" alt="background" loading="lazy" />
+      <div class="body-bg-wrapper"></div>
     </div>
     <div class="body-bg-wrapper-2"></div>
 
     <!-- Move to Top Button -->
 
-    <button onclick="window.scrollTo({ top: 0});" id="scroll-top-button" title="Go to top"><i
-            class="fa-solid fa-chevron-up"></i></button>
+    <button
+      onclick="window.scrollTo({ top: 0});"
+      id="scroll-top-button"
+      title="Go to top"
+    >
+      <i class="fa-solid fa-chevron-up"></i>
+    </button>
 
     <!-- Intro Text starts here !!!!! -->
 
     <div class="intro-section">
-        <h2 class="intro-section-sub-heading">INFINITE POSSIBILITIES</h2>
-        <h1 class="intro-section-main-heading">AOSC BUSINESS CONSULTING</h1>
-        <p class="intro-section-text">Software & App Development</p>
-        <p class="intro-section-text">Accounting & Bookkeeping</p>
-        <p class="intro-section-text">Business Process Outsourcing</p>
-        <h2 class="intro-section-sub-heading">OUR SUCCESS IS ULTIMATELY YOUR SUCCESS</h2>
-        <button class="intro-section-button">LEARN MORE</button>
+      <h2 class="intro-section-sub-heading">INFINITE POSSIBILITIES</h2>
+      <h1 class="intro-section-main-heading">AOSC BUSINESS CONSULTING</h1>
+      <p class="intro-section-text">Software & App Development</p>
+      <p class="intro-section-text">Accounting & Bookkeeping</p>
+      <p class="intro-section-text">Business Process Outsourcing</p>
+      <h2 class="intro-section-sub-heading">
+        OUR SUCCESS IS ULTIMATELY YOUR SUCCESS
+      </h2>
+      <button class="intro-section-button">LEARN MORE</button>
     </div>
 
     <!-- Intro-Slider starts here !!!!! -->
 
-    <div class="scroll-right" onclick="goNext()"><i class="fa-solid fa-chevron-right"></i></div>
-    <div class="scroll-left" onclick="goPrev()"><i class="fa-solid fa-chevron-left"></i></div>
-    <div class="intro-slider">
-        
-        <div class="intro-slider-container">
-            <img src="media\intro-slider-1.jpg" alt="container" class="intro-img" loading="lazy">
-            <section class="intro-text">
-                <h2 class="intro-slider-name">Gagandeep Singh</h2>
-                <p class="text">Experienced team leader with expertise in Power BI and Vertica. Responsible for leading a team in the implementation and optimization of data visualization and analytics solutions. Strong technical skills combined with effective leadership and project management capabilities to deliver data-driven insights to the organization.
-                </p>
-                <section class="icon">
-                    <a href="https://www.linkedin.com/in/gagandeep-singh-468966182?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2F9olchVcTaGnUwUbTwzXgg%3D%3D"
-                        class="icon-links"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" class="icon-links"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="icon-links"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="icon-links"><i class="fa-brands fa-facebook"></i></a>
-                </section>
-            </section>
-
-        </div>
-        <div class="intro-slider-container">
-            <img src="media\intro-slider-2.jpg" alt="container" class="intro-img" loading="lazy">
-            </section>
-            <section class="intro-text">
-                <h2 class="intro-slider-name">Hardeep S. Chawla</h2>
-                <p class="text">Experienced Microsoft Certified Dynamics 365 Consultant at AOSC Technologies. Proficient in implementing and customizing Dynamics 365 solutions to meet client business needs. Skilled in analysis, design, development, and project management. Proven track record of delivering successful Dynamics 365 projects on time and within budget.
-                </p>
-                <section class="icon">
-                    <a href="https://www.linkedin.com/in/hardeep-s-chawla-aa500274/"
-                        class="icon-links"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" class="icon-links"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="icon-links"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="icon-links"><i class="fa-brands fa-facebook"></i></a>
-                </section>
-            </section>
-
-        </div>
-        <div class="intro-slider-container">
-            <img src="media\intro-slider-3.jpg" alt="container" class="intro-img" loading="lazy">
-
-            <section class="intro-text">
-                <h2 class="intro-slider-name">Aashima Sharma</h2>
-                <p class="text">As an experienced Power BI Developer at AOSC Technologies, the role involves designing and implementing advanced data visualization and business intelligence solutions. Responsibilities include building custom dashboards, reports, and analytical models to deliver critical insights that drive strategic decision-making.
-                </p>
-                <section class="icon">
-                    <a href="https://www.linkedin.com/in/aashima-sharma-b732b11b6/"
-                        class="icon-links"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="#" class="icon-links"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#" class="icon-links"><i class="fa-brands fa-twitter"></i></a>
-                    <a href="#" class="icon-links"><i class="fa-brands fa-facebook"></i></a>
-                </section>
-            </section>
-        </div>
+    <div class="scroll-right" onclick="goNext()">
+      <i class="fa-solid fa-chevron-right"></i>
     </div>
-    
+    <div class="scroll-left" onclick="goPrev()">
+      <i class="fa-solid fa-chevron-left"></i>
+    </div>
+    <div class="intro-slider">
+      <div class="intro-slider-container">
+        <img
+          src="media\intro-slider-1.jpg"
+          alt="container"
+          class="intro-img"
+          loading="lazy"
+        />
+        <section class="intro-text">
+          <h2 class="intro-slider-name">Gagandeep Singh</h2>
+          <p class="text">
+            Experienced team leader with expertise in Power BI and Vertica.
+            Responsible for leading a team in the implementation and
+            optimization of data visualization and analytics solutions. Strong
+            technical skills combined with effective leadership and project
+            management capabilities to deliver data-driven insights to the
+            organization.
+          </p>
+          <section class="icon">
+            <a
+              href="https://www.linkedin.com/in/gagandeep-singh-468966182?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B%2F9olchVcTaGnUwUbTwzXgg%3D%3D"
+              class="icon-links"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="#" class="icon-links"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="icon-links"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="#" class="icon-links"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </section>
+        </section>
+      </div>
+      <div class="intro-slider-container">
+        <img
+          src="media\intro-slider-2.jpg"
+          alt="container"
+          class="intro-img"
+          loading="lazy"
+        />
+        <section class="intro-text">
+          <h2 class="intro-slider-name">Hardeep S. Chawla</h2>
+          <p class="text">
+            Experienced Microsoft Certified Dynamics 365 Consultant at AOSC
+            Technologies. Proficient in implementing and customizing Dynamics
+            365 solutions to meet client business needs. Skilled in analysis,
+            design, development, and project management. Proven track record of
+            delivering successful Dynamics 365 projects on time and within
+            budget.
+          </p>
+          <section class="icon">
+            <a
+              href="https://www.linkedin.com/in/hardeep-s-chawla-aa500274/"
+              class="icon-links"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="#" class="icon-links"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="icon-links"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="#" class="icon-links"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </section>
+        </section>
+      </div>
+      <div class="intro-slider-container">
+        <img
+          src="media\intro-slider-3.jpg"
+          alt="container"
+          class="intro-img"
+          loading="lazy"
+        />
+
+        <section class="intro-text">
+          <h2 class="intro-slider-name">Aashima Sharma</h2>
+          <p class="text">
+            As an experienced Power BI Developer at AOSC Technologies, the role
+            involves designing and implementing advanced data visualization and
+            business intelligence solutions. Responsibilities include building
+            custom dashboards, reports, and analytical models to deliver
+            critical insights that drive strategic decision-making.
+          </p>
+          <section class="icon">
+            <a
+              href="https://www.linkedin.com/in/aashima-sharma-b732b11b6/"
+              class="icon-links"
+              ><i class="fa-brands fa-linkedin"></i
+            ></a>
+            <a href="#" class="icon-links"
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+            <a href="#" class="icon-links"
+              ><i class="fa-brands fa-twitter"></i
+            ></a>
+            <a href="#" class="icon-links"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </section>
+        </section>
+      </div>
+    </div>
+
     <!-- Course Section!!!!!! -->
 
     <section class="course">
-        <h1 class="course-section-main-heading">Our Training Programs</h1>
+      <h1 class="course-section-main-heading">Our Training Programs</h1>
 
-        <div class="courses-container">
-            <div class="card">
-                <div class="content">
-                    <div class="back">
-                        <div class="back-content">
-                            <strong>MICROSOFT<br>COURSES</strong>
-                        </div>
-                    </div>
-                    <div class="front">
-                        <div class="front-content">
-                            <div class="description">
-                                <div class="title">
-                                    <p class="title">
-                                        <strong>Microsoft Courses</strong>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card-text">
-                                <ul>
-                                    <li>Power BI (Data Analyst)</li>
-                                    <li>Power PLatform (Suite)</li>
-                                    <li>Office 365</li>
-                                    <li>Ultimate Excel</li>
-                                    <li>Dynamics 365: CRM & ERP</li>
-                                    <li>Power Automate + Microsoft Power Apps</li>
-                                    <li>SharePoint Administrator</li>
-                                    <li>SharePoint Developer</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="courses-container">
+        <div class="card">
+          <div class="content">
+            <div class="back">
+              <div class="back-content">
+                <strong>MICROSOFT<br />COURSES</strong>
+              </div>
             </div>
-
-            <div class="card">
-                <div class="content">
-                    <div class="back">
-                        <div class="back-content">
-                            <strong>MICROSOFT<br>CERTIFICATIONS</strong>
-                        </div>
-                    </div>
-                    <div class="front">
-                        <div class="front-content">
-                            <div class="description">
-                                <div class="title">
-                                    <p class="title">
-                                        <strong>Microsoft Certifications</strong>
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card-text">
-                                <ul>
-                                    <li>PL-100 (Microsoft Power Platform App Maker)</li>
-                                    <li>PL-300 (Microsoft Power BI Data Analyst)</li>
-                                    <li>PL-400 (Microsoft Power Platform Developer)</li>
-                                    <li>PL-600 (Microsoft Power Platform Solution Architect)</li>
-                                    <li>PL-900 (Microsoft Power Platform Fundamentals)</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+            <div class="front">
+              <div class="front-content">
+                <div class="description">
+                  <div class="title">
+                    <p class="title">
+                      <strong>Microsoft Courses</strong>
+                    </p>
+                  </div>
                 </div>
-            </div>
-
-            <div class="card">
-                <div class="content">
-                    <div class="back">
-                        <div class="back-content">
-                            <strong>OTHER<br>COURSES</strong>
-                        </div>
-                    </div>
-                    <div class="front">
-                        <div class="front-content">
-                            <div class="description">
-                                <div class="title">
-                                    <p class="title">
-                                        Other Courses
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="card-text">
-                                <ul>
-                                    <li>Web Developement (HTML, CSS, JAVA, JavaScript, C, C++, C#, Python, etc.)</li>
-                                    <li>Digital Marketing</li>
-                                    <li>Investing in Stock Market</li>
-                                    <li>International Accounting (Xero, Quickbooks, MYOB, etc.)</li>
-                                    <li>Artificial Intelligence</li>
-                                    <li>Project Management</li>
-                                    <li>Graphic Designing + Video Editing</li>
-                                    <li>Crash Courses for Government Typing Test</li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                <div class="card-text">
+                  <ul>
+                    <li>Power BI (Data Analyst)</li>
+                    <li>Power PLatform (Suite)</li>
+                    <li>Office 365</li>
+                    <li>Ultimate Excel</li>
+                    <li>Dynamics 365: CRM & ERP</li>
+                    <li>Power Automate + Microsoft Power Apps</li>
+                    <li>SharePoint Administrator</li>
+                    <li>SharePoint Developer</li>
+                  </ul>
                 </div>
+              </div>
             </div>
+          </div>
         </div>
+
+        <div class="card">
+          <div class="content">
+            <div class="back">
+              <div class="back-content">
+                <strong>MICROSOFT<br />CERTIFICATIONS</strong>
+              </div>
+            </div>
+            <div class="front">
+              <div class="front-content">
+                <div class="description">
+                  <div class="title">
+                    <p class="title">
+                      <strong>Microsoft Certifications</strong>
+                    </p>
+                  </div>
+                </div>
+                <div class="card-text">
+                  <ul>
+                    <li>PL-100 (Microsoft Power Platform App Maker)</li>
+                    <li>PL-300 (Microsoft Power BI Data Analyst)</li>
+                    <li>PL-400 (Microsoft Power Platform Developer)</li>
+                    <li>
+                      PL-600 (Microsoft Power Platform Solution Architect)
+                    </li>
+                    <li>PL-900 (Microsoft Power Platform Fundamentals)</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="content">
+            <div class="back">
+              <div class="back-content">
+                <strong>OTHER<br />COURSES</strong>
+              </div>
+            </div>
+            <div class="front">
+              <div class="front-content">
+                <div class="description">
+                  <div class="title">
+                    <p class="title">Other Courses</p>
+                  </div>
+                </div>
+                <div class="card-text">
+                  <ul>
+                    <li>
+                      Web Developement (HTML, CSS, JAVA, JavaScript, C, C++, C#,
+                      Python, etc.)
+                    </li>
+                    <li>Digital Marketing</li>
+                    <li>Investing in Stock Market</li>
+                    <li>
+                      International Accounting (Xero, Quickbooks, MYOB, etc.)
+                    </li>
+                    <li>Artificial Intelligence</li>
+                    <li>Project Management</li>
+                    <li>Graphic Designing + Video Editing</li>
+                    <li>Crash Courses for Government Typing Test</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- Image Slider starts here !!!!! -->
 
     <section class="image-slider">
-        <p class="image-section-heading">EVENTS & SEMINAR GALLERY</p>
-        <h3 class="slider-heading"><u>DAV College, Amritsar</u></h3>
-        <div class="slider-section" data-direction="left">
-            <div class="slider-inner">
-                <img src="media\slider1-1.png" alt="container" loading="lazy">
-                <img src="media\slider1-2.png" alt="container" loading="lazy">
-                <img src="media\slider1-3.png" alt="container" loading="lazy">
-                <img src="media\slider1-4.png" alt="container" loading="lazy">
-                <img src="media\slider1-5.png" alt="container" loading="lazy">
-                <img src="media\slider1-6.png" alt="container" loading="lazy">
-                <img src="media\slider1-7.png" alt="container" loading="lazy">
-            </div>
+      <p class="image-section-heading">EVENTS & SEMINAR GALLERY</p>
+      <h3 class="slider-heading"><u>DAV College, Amritsar</u></h3>
+      <div class="slider-section" data-direction="left">
+        <div class="slider-inner">
+          <img src="media\slider1-1.png" alt="container" loading="lazy" />
+          <img src="media\slider1-2.png" alt="container" loading="lazy" />
+          <img src="media\slider1-3.png" alt="container" loading="lazy" />
+          <img src="media\slider1-4.png" alt="container" loading="lazy" />
+          <img src="media\slider1-5.png" alt="container" loading="lazy" />
+          <img src="media\slider1-6.png" alt="container" loading="lazy" />
+          <img src="media\slider1-7.png" alt="container" loading="lazy" />
         </div>
-        <h3 class="slider-heading"><u>AGC, Amritsar</u></h3>
-        <div class="slider-section" data-direction="right">
-            <div class="slider-inner">
-                <img src="media\slider2-1.png" alt="container" loading="lazy">
-                <img src="media\slider2-2.png" alt="container" loading="lazy">
-                <img src="media\slider2-3.png" alt="container" loading="lazy">
-                <img src="media\slider2-4.png" alt="container" loading="lazy">
-                <img src="media\slider2-5.png" alt="container" loading="lazy">
-                <img src="media\slider2-6.png" alt="container" loading="lazy">
-                <img src="media\slider2-7.png" alt="container" loading="lazy">
-            </div>
+      </div>
+      <h3 class="slider-heading"><u>AGC, Amritsar</u></h3>
+      <div class="slider-section" data-direction="right">
+        <div class="slider-inner">
+          <img src="media\slider2-1.png" alt="container" loading="lazy" />
+          <img src="media\slider2-2.png" alt="container" loading="lazy" />
+          <img src="media\slider2-3.png" alt="container" loading="lazy" />
+          <img src="media\slider2-4.png" alt="container" loading="lazy" />
+          <img src="media\slider2-5.png" alt="container" loading="lazy" />
+          <img src="media\slider2-6.png" alt="container" loading="lazy" />
+          <img src="media\slider2-7.png" alt="container" loading="lazy" />
         </div>
-        <h3 class="slider-heading"><u>BBK DAV COLLEGE FOR WOMEN, AMRITSAR</u></h3>
-        <div class="slider-section" data-direction="left">
-            <div class="slider-inner">
-                <img src="media\slider3-1.png" alt="container" loading="lazy">
-                <img src="media\slider3-2.png" alt="container" loading="lazy">
-                <img src="media\slider3-3.png" alt="container" loading="lazy">
-                <img src="media\slider3-4.png" alt="container" loading="lazy">
-                <img src="media\slider3-5.png" alt="container" loading="lazy">
-                <img src="media\slider3-6.png" alt="container" loading="lazy">
-                <img src="media\slider3-7.png" alt="container" loading="lazy">
-            </div>
+      </div>
+      <h3 class="slider-heading"><u>BBK DAV COLLEGE FOR WOMEN, AMRITSAR</u></h3>
+      <div class="slider-section" data-direction="left">
+        <div class="slider-inner">
+          <img src="media\slider3-1.png" alt="container" loading="lazy" />
+          <img src="media\slider3-2.png" alt="container" loading="lazy" />
+          <img src="media\slider3-3.png" alt="container" loading="lazy" />
+          <img src="media\slider3-4.png" alt="container" loading="lazy" />
+          <img src="media\slider3-5.png" alt="container" loading="lazy" />
+          <img src="media\slider3-6.png" alt="container" loading="lazy" />
+          <img src="media\slider3-7.png" alt="container" loading="lazy" />
         </div>
+      </div>
     </section>
 
     <!-- message !!!!! -->
     <div class="message-main-container">
-        <div class="message-sub-container">
-            <h1 class="message-heading">Leadership Message</h1>
-            <p class="message-text">“There hasn't been a time like this where there is more uncertainty in the world. We want you to stay ahead of your competition in a rapidly changing world. The secret is to really help you with anything and everything so you can focus on things that are more important for your business. Our success is ultimately your success."</p>
-        </div>
+      <div class="message-sub-container">
+        <h1 class="message-heading">Leadership Message</h1>
+        <p class="message-text">
+          “There hasn't been a time like this where there is more uncertainty in
+          the world. We want you to stay ahead of your competition in a rapidly
+          changing world. The secret is to really help you with anything and
+          everything so you can focus on things that are more important for your
+          business. Our success is ultimately your success."
+        </p>
+      </div>
     </div>
-    
+
     <!-- Footer starts here !!!!!! -->
 
     <footer>
-        <div class="footer-section">
-            <h4 class="footer-section-heading">About Us</h4>
-            <ul class="footer-section-text">
-                <li><a href="about-us.html">Our Story</a></li>
-                <li><a href="services.html">Our Services</a></li>
-                <li><a href="contact-us.html">Contact Us</a></li>
-            </ul>
-        </div>
-        <div class="footer-section">
-            <h4 class="footer-section-heading">Social Media </h4>
-            <span class="footer-socials">
-                <a id="footer-socials-links" class="footer-socials-links"
-                    href="https://www.instagram.com/aosctechnologiesindia/"><i class="fa-brands fa-instagram"></i></a>
-                <a id="footer-socials-links" href="https://in.linkedin.com/company/aosc-india-private-limited"><i
-                        class="fa-brands fa-linkedin"></i></a>
-                <a id="footer-socials-links"
-                    href="https://m.facebook.com/aoscindia/photos/boost-your-business-with-aosc-indias-top-notch-business-process-outsourcing-serv/302003715666711/">
-                    <i class="fa-brands fa-facebook"></i></a>
-                <a id="footer-socials-links" href="https://twitter.com/aoscindia"><i
-                        class="fa-brands fa-x-twitter"></i></a>
-            </span>
-            <iframe class="footer-map" title="AOSC Location Map"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d424.5500999534716!2d74.8625075396164!3d31.650252663182872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919631340fec2a1%3A0x4c1f1a1bcdb2a1fc!2sAOSC%20Technologies%20India!5e0!3m2!1sen!2sin!4v1714106238537!5m2!1sen!2sin"
-                style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
-        </div>
-        <div class="footer-section">
-            <h4 class="footer-section-heading">Contact</h4>
-            <div class="footer-contact">
-                <div class="footer-contact-content-container">
-                    <div class="footer-contact-icon"><i class="fa-solid fa-phone"></i></div>
-                    <div class="footer-contact-text">+91 7347377729</div>
-                </div>
-                <div class="footer-contact-content-container">
-                    <div class="footer-contact-icon"><i class="fa-solid fa-envelope"></i></div>
-                    <div class="footer-contact-text"><a href="mailto:operations@aoscindia.com">operations@aoscindia.com</a></div>
-                </div>
-                <div class="footer-contact-content-container">
-                    <div class="footer-contact-icon"><i class="fa-solid fa-location-dot"></i></div>
-                    <div class="footer-contact-text">Level 4, Twin Tower Building B-Block, Ranjit Avenue, Amritsar, Punjab, India</div>
-                </div>
+      <div class="footer-section">
+        <h4 class="footer-section-heading">About Us</h4>
+        <ul class="footer-section-text">
+          <li><a href="about-us.html">Our Story</a></li>
+          <li><a href="services.html">Our Services</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4 class="footer-section-heading">Social Media</h4>
+        <span class="footer-socials">
+          <a
+            id="footer-socials-links"
+            class="footer-socials-links"
+            href="https://www.instagram.com/aosctechnologiesindia/"
+            ><i class="fa-brands fa-instagram"></i
+          ></a>
+          <a
+            id="footer-socials-links"
+            href="https://in.linkedin.com/company/aosc-india-private-limited"
+            ><i class="fa-brands fa-linkedin"></i
+          ></a>
+          <a
+            id="footer-socials-links"
+            href="https://m.facebook.com/aoscindia/photos/boost-your-business-with-aosc-indias-top-notch-business-process-outsourcing-serv/302003715666711/"
+          >
+            <i class="fa-brands fa-facebook"></i
+          ></a>
+          <a id="footer-socials-links" href="https://twitter.com/aoscindia"
+            ><i class="fa-brands fa-x-twitter"></i
+          ></a>
+        </span>
+        <iframe
+          class="footer-map"
+          title="AOSC Location Map"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d424.5500999534716!2d74.8625075396164!3d31.650252663182872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3919631340fec2a1%3A0x4c1f1a1bcdb2a1fc!2sAOSC%20Technologies%20India!5e0!3m2!1sen!2sin!4v1714106238537!5m2!1sen!2sin"
+          style="border: 0"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+      <div class="footer-section">
+        <h4 class="footer-section-heading">Contact</h4>
+        <div class="footer-contact">
+          <div class="footer-contact-content-container">
+            <div class="footer-contact-icon">
+              <i class="fa-solid fa-phone"></i>
             </div>
+            <div class="footer-contact-text">+91 7347377729</div>
+          </div>
+          <div class="footer-contact-content-container">
+            <div class="footer-contact-icon">
+              <i class="fa-solid fa-envelope"></i>
+            </div>
+            <div class="footer-contact-text">
+              <a href="mailto:operations@aoscindia.com"
+                >operations@aoscindia.com</a
+              >
+            </div>
+          </div>
+          <div class="footer-contact-content-container">
+            <div class="footer-contact-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+            <div class="footer-contact-text">
+              Level 4, Twin Tower Building B-Block, Ranjit Avenue, Amritsar,
+              Punjab, India
+            </div>
+          </div>
         </div>
+      </div>
     </footer>
     <script src="index.js" defer></script>
-</body>
+  </body>
 </html>
